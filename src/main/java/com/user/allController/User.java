@@ -6,7 +6,7 @@ public class User {
         String password = "";
     }
     private class CommonUser{
-    
+
     }
     private class Admin{
 
