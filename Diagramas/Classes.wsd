@@ -2,18 +2,39 @@
 class Usuario{
     -String nome
     -String senha
-    -String CPF
+    -String cpf
     -bool administrador
+    +adicionarUsuario()
+    +removerUsuario()
+    +promoverAdministrador()
+    +rebaixarParaComum()
+    
 }
 
 class Blanqueta{
     -String posicao
     -String maquina
     -int repeticoes
-
+    -String observacoes
+    +adicionarBlanqueta()
+    +removerBlanqueta()
+    +consultaDeBlanqueta()
+}
+class Processo{
+    -String dataEHora
+    +consultaDeProcessos()
+    +adicionarProcesso()
 }
 
 class Produto{
     -String codigo
+    -Streing nome
+    -String cliente
+    +adicionarProduto()
+    +removerProduto()
+    +consultaDeProdutos()
 }
+
+Blanqueta "1..1" .... "0..*" Processo : compativel
+Produto"1..1" .... "0..*" Processo:manufatura
 @enduml

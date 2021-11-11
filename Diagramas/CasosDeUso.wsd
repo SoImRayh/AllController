@@ -1,11 +1,25 @@
 @startuml
-    :usuário:
-    :usuário administrador: as admin
+:Usuário:
+:Usuário administrador: as admin
 
-    usecase (entrar) as UC1
-    rectangle system{
+usecase (entrar) as UC1
+rectangle sistema{
     usecase (Consultar blanqueta) as UC2
-    }
-    admin -up-|> usuário
-    usuário -right-> UC1
+    usecase (Manter Armazem de Blanqueta) as UC3
+    usecase (Abrir consultas) as UC8
+    usecase (Consultar histórico de processos) as UC4
+    usecase (Consultar programação futura de processos) as UC7
+    usecase (Manter armazem de Produtos) as UC5
+    usecase (Gerenciar usuários) as UC6
+}
+
+admin -up-|> Usuário
+Usuário --> UC1
+UC1 --> UC8
+UC8 ..>UC4
+UC8 ..>UC2
+UC8 ..>UC7
+admin --> UC3
+admin --> UC5
+admin --> UC6
 @enduml
