@@ -1,0 +1,11 @@
+@startuml
+    :usuário:
+    :usuário administrador: as admin
+
+    usecase (entrar) as UC1
+    rectangle system{
+    usecase (Consultar blanqueta) as UC2
+    }
+    admin -up-|> usuário
+    usuário -right-> UC1
+@enduml

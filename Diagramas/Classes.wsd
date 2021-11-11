@@ -1,0 +1,19 @@
+@startuml
+class Usuario{
+    -String nome
+    -String senha
+    -String CPF
+    -bool administrador
+}
+
+class Blanqueta{
+    -String posicao
+    -String maquina
+    -int repeticoes
+
+}
+
+class Produto{
+    -String codigo
+}
+@enduml
