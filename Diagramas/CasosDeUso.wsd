@@ -16,9 +16,9 @@ rectangle sistema{
 admin -up-|> Usuário
 Usuário --> UC1
 UC1 --> UC8
-UC8 ..>UC4
-UC8 ..>UC2
-UC8 ..>UC7
+UC8 ..>UC4 : <<extend>>
+UC8 ..>UC2 : <<extend>>
+UC8 ..>UC7 : <<extend>>
 admin --> UC3
 admin --> UC5
 admin --> UC6
