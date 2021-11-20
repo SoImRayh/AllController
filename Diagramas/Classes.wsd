@@ -1,40 +1,57 @@
 @startuml
 class Usuario{
-    -String nome
-    -String senha
-    -String cpf
-    -bool administrador
+    -nome : String
+    -senha : String
+    -cpf : String
+
+    +consultaDeBlanqueta(Blanqueta blanqueta)
+    +consultaDeProcessos()
+    +consultaDeProdutos()
+}
+class UsuarioAdministrador{
+    -administrador : bool
+    'controle de usuarios
     +adicionarUsuario()
     +removerUsuario()
     +promoverAdministrador()
     +rebaixarParaComum()
+    'controle de Blanquetas
+    +adicionarBlanqueta()
+    +removerBlanqueta()
+    'controle de Produtos
+    +adicionarProduto()
+    +removerProduto()
+    'controle de Processo
+    +adicionarProcesso()
+    +removerProcesso()
+}
+class Blanqueta{
+    -posicao : String
+    -maquina : String
+    -repeticoes : int
+    -observacoes : String
+}
+class Processo{
+    -dataEHora : Date
+    -blanqueta : blanqueta
+    -produto : Produto
+    
+}
+class Produto{
+    -codigo : String
+    -nome : String
+    -cliente : String
+    
     
 }
 
-class Blanqueta{
-    -String posicao
-    -String maquina
-    -int repeticoes
-    -String observacoes
-    +adicionarBlanqueta()
-    +removerBlanqueta()
-    +consultaDeBlanqueta()
-}
-class Processo{
-    -String dataEHora
-    +consultaDeProcessos()
-    +adicionarProcesso()
-}
 
-class Produto{
-    -String codigo
-    -Streing nome
-    -String cliente
-    +adicionarProduto()
-    +removerProduto()
-    +consultaDeProdutos()
-}
+Blanqueta "1..1" --- "0..*" Processo : compativel
+Produto"1..1" --- "0..*" Processo:manufatura
 
-Blanqueta "1..1" .... "0..*" Processo : compativel
-Produto"1..1" .... "0..*" Processo:manufatura
+UsuarioAdministrador --|> Usuario
+
+Usuario -- Processo : consulta
+Usuario --  Blanqueta : consulta
+Usuario -- Produto : consulta
 @enduml
