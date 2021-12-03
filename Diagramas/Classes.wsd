@@ -3,27 +3,30 @@ class Usuario{
     -nome : String
     -senha : String
     -cpf : String
+    -administrador : bool
 
-    +consultaDeBlanqueta(Blanqueta blanqueta)
-    +consultaDeProcessos()
-    +consultaDeProdutos()
+    +consultaDeBlanqueta(blanqueta : Blanqueta) : void
+    +consultaDeProcessos(processo : Processo) : void
+    +consultaDeProdutos(produto : Produto) : void
 }
 class UsuarioAdministrador{
-    -administrador : bool
     'controle de usuarios
-    +adicionarUsuario()
-    +removerUsuario()
-    +promoverAdministrador()
-    +rebaixarParaComum()
+    +adicionarUsuario (nome : String, senha : String, CPF : String) : Usuario
+    +removerUsuario (usuario : Usuario) : void
+    +promoverAdministrador (usuario : Usuario) : void
+    +rebaixarParaComum (usuario : Usuario) : void
     'controle de Blanquetas
-    +adicionarBlanqueta()
-    +removerBlanqueta()
+    +adicionarBlanqueta (blanqueta : Blanqueta) : Blanqueta
+    +removerBlanqueta (blanqueta : Blanqueta) : void
     'controle de Produtos
-    +adicionarProduto()
-    +removerProduto()
+    +adicionarProduto (produto : Produto) : Produto
+    +removerProduto (produto : Produto) : void
     'controle de Processo
-    +adicionarProcesso()
-    +removerProcesso()
+    +adicionarProcesso (processo : Processo) : Processo
+    +removerProcesso (Processo : Processo)  : void
+    'controle de Empresa
+    +adicionarEmpresa (nome : String) : Empresa
+    +removerEmpresa (empresa: Empresa)
 }
 class Blanqueta{
     -posicao : String
@@ -44,6 +47,10 @@ class Produto{
     
     
 }
+class Empresa{
+    -nome : String
+
+}
 
 
 Blanqueta "1..1" --- "0..*" Processo : compativel
@@ -54,4 +61,5 @@ UsuarioAdministrador --|> Usuario
 Usuario -- Processo : consulta
 Usuario --  Blanqueta : consulta
 Usuario -- Produto : consulta
+Produto "0..*"--"1..1" Empresa : pertence
 @enduml
