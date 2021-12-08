@@ -1,6 +1,6 @@
 Projeto do segundo período do curso de Ciências da computação
 Projeto desenvolvido por:
-    Railande da Silva : \n
+    Railande da Silva : 
     Adriel :
     Ítalo : 
 
