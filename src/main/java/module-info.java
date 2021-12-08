@@ -10,6 +10,6 @@ module com.example.allcontroller {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.example.allcontroller to javafx.fxml;
-    exports com.example.allcontroller;
+    opens com.example.Main to javafx.fxml;
+    exports com.example.Main;
 }
