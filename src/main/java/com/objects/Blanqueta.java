@@ -1,13 +1,13 @@
 package com.objects;
 
-public class Blanquetas {
+public class Blanqueta {
 
     private String position;
     private String machine;
     private String faca;
     private int expositions;
 
-    Blanquetas() {
+    Blanqueta() {
         String position = "A1"; // position ex: A1, E3
         String machine = "";    //CD / KBA / XL
         String faca = "";       // ex: faca 172, 173

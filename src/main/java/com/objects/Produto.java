@@ -1,12 +1,12 @@
 package com.objects;
 
-public class Produtos {
+public class Produto {
 
     private String name;
     private String company;
     private String code;
 
-    Produtos(){
+    Produto(){
         String name = ""; //name of product
         String company = "";//name of client
         String code = ""; //code of product
