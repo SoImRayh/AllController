@@ -3,7 +3,7 @@ package com.objects;
 public class Produto {
 
     private String name;
-    private String company;
+    private String empresa;
     private String code;
 
     Produto(){
@@ -16,8 +16,8 @@ public class Produto {
         this.code = code;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
     }
 
     public void setName(String name) {
@@ -28,8 +28,8 @@ public class Produto {
         return code;
     }
 
-    public String getCompany() {
-        return company;
+    public String getEmpresa() {
+        return empresa;
     }
 
     public String getName() {
