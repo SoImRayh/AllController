@@ -1,3 +1,7 @@
 .background{
     -fx-background-color:#2E2E48;
 }
+
+.screenbackground{
+    -fx-background-image: "";
+}
