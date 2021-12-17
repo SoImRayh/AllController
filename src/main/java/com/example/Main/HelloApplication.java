@@ -20,6 +20,21 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public void telawelcome()throws IOException{
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("screen-AdminWelcome.fxml"));
+        String vu = "blabdjkaf";
+        System.out.println("cliquei");
+
+        Stage teste = new Stage();
+        Group bla = new Group();
+        Scene telinha = new Scene(loader.load());
+
+
+        teste.setScene(telinha);
+        teste.setTitle(vu);
+        teste.show();
+
+    }
 
     public void cadastroUser(){
 
