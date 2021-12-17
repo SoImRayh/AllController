@@ -1,3 +1,8 @@
 .background{
     -fx-background-color:#2E2E48;
 }
+
+.screenbackground{
+    -fx-background-color: #202020;
+    -fx-background-image:"src/main/resources/Images/logo.png";
+}

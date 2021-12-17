@@ -12,8 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="615.0" style="-fx-background-color: #2E2E48;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="615.0" style="-fx-background-color: #2E2E48;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HelloController">
    <children>
       <Text fill="WHITE" layoutX="34.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário">
          <font>
@@ -27,7 +26,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <JFXButton fx:id="BtnEntrar" graphicTextGap="6.0" layoutX="33.0" layoutY="308.0" prefHeight="37.0" prefWidth="233.0" ripplerFill="WHITE" style="-fx-background-color: #453CAB;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="BtnEntrar" graphicTextGap="6.0" layoutX="33.0" layoutY="308.0" onAction="#admin" prefHeight="37.0" prefWidth="233.0" ripplerFill="WHITE" style="-fx-background-color: #453CAB;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -50,8 +49,17 @@
             <Font size="10.0" />
          </font>
       </JFXCheckBox>
-      <Hyperlink layoutX="158.0" layoutY="256.0" text="Esqueceu a senha?" textFill="#0095ff" />
-      <Text fill="WHITE" layoutX="28.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright                 2021 All rights reserved." wrappingWidth="239.873046875" />
-      <Hyperlink layoutX="83.0" layoutY="399.0" text="ALLBOX" textFill="#0095ff" />
+      <Hyperlink layoutX="158.0" layoutY="256.0" text="Esqueceu a senha?" textFill="#0095ff">
+         <font>
+            <Font size="11.0" />
+         </font></Hyperlink>
+      <Text fill="WHITE" layoutX="30.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright                 2021 All rights reserved." wrappingWidth="243.873046875">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+      <Hyperlink layoutX="81.0" layoutY="410.0" text="ALLBOX" textFill="#0095ff">
+         <font>
+            <Font size="10.0" />
+         </font></Hyperlink>
    </children>
 </AnchorPane>
