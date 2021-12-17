@@ -2,6 +2,8 @@
   <library name="Maven: com.dlsc.formsfx:formsfx-core:11.3.2">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2.jar!/" />
+      <root url="file://$PROJECT_DIR$/libs/javafx-sdk-17.0.1/lib" />
+      <root url="jar://$PROJECT_DIR$/libs/Jfoenix/jfoenix-9.0.10.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2-javadoc.jar!/" />
@@ -9,5 +11,6 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/dlsc/formsfx/formsfx-core/11.3.2/formsfx-core-11.3.2-sources.jar!/" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/libs/javafx-sdk-17.0.1/lib" recursive="false" />
   </library>
 </component>
