@@ -15,16 +15,5 @@ import java.io.IOException;
 
 public class HelloController {
 
-    @FXML
-    private Button vrau;
 
-    @FXML
-    void admin(ActionEvent event) throws IOException {
-    }
-
-    @FXML
-    void cliquei(ActionEvent event) {
-        System.out.println("cliquei");
-
-    }
 }
