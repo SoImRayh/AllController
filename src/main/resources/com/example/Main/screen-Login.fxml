@@ -19,7 +19,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField layoutX="33.0" layoutY="150.0" opacity="0.6" prefHeight="35.0" prefWidth="233.0" />
+      <TextField fx:id="userLabel" layoutX="33.0" layoutY="150.0" opacity="0.6" prefHeight="35.0" prefWidth="233.0" />
       <PasswordField layoutX="33.0" layoutY="217.0" opacity="0.6" prefHeight="35.0" prefWidth="233.0" />
       <Text fill="WHITE" layoutX="34.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
          <font>

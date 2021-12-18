@@ -6,3 +6,10 @@
     -fx-background-color: #202020;
     -fx-background-image:"src/main/resources/Images/logo.png";
 }
+.button{
+    -fx-background-color:  #453CAB;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+
+    
+}

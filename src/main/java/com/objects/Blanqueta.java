@@ -18,7 +18,7 @@ public class Blanqueta {
     // getters and setters
 
     public String getPosition() {
-        return position;
+        return this.position;
     }
 
     public String getMachine() {
