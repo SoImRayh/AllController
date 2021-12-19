@@ -1,4 +1,4 @@
 package com.controllers;
 
-public class UserWelcomeController {
+public class ControllerUserWelcome {
 }

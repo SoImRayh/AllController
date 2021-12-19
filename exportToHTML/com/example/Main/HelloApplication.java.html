@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>HelloApplication.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HelloApplication.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.Main</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">javafx.application.Application</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javafx.fxml.FXMLLoader</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javafx.scene.Group</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javafx.scene.Scene</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">javafx.stage.Stage</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.io.IOException</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">HelloApplication </span><span class="s0">extends </span><span class="s1">Application {</span>
+    <span class="s1">{</span>
+
+    <span class="s1">}</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">start(Stage stage) </span><span class="s0">throws </span><span class="s1">IOException {</span>
+        <span class="s1">FXMLLoader fxmlLoader = </span><span class="s0">new </span><span class="s1">FXMLLoader(HelloApplication.</span><span class="s0">class</span><span class="s1">.getResource(</span><span class="s2">&quot;screen-Login.fxml&quot;</span><span class="s1">))</span><span class="s0">;</span>
+        <span class="s1">Scene scene = </span><span class="s0">new </span><span class="s1">Scene(fxmlLoader.load())</span><span class="s0">;</span>
+        <span class="s1">stage.setTitle(</span><span class="s2">&quot;AllController&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">stage.setScene(scene)</span><span class="s0">;</span>
+        <span class="s1">stage.show()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">telawelcome()</span><span class="s0">throws </span><span class="s1">IOException{</span>
+        <span class="s1">FXMLLoader loader = </span><span class="s0">new </span><span class="s1">FXMLLoader(HelloApplication.</span><span class="s0">class</span><span class="s1">.getResource(</span><span class="s2">&quot;screen-AdminWelcome.fxml&quot;</span><span class="s1">))</span><span class="s0">;</span>
+        <span class="s1">String vu = </span><span class="s2">&quot;blabdjkaf&quot;</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;cliquei&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">Stage teste = </span><span class="s0">new </span><span class="s1">Stage()</span><span class="s0">;</span>
+        <span class="s1">Group bla = </span><span class="s0">new </span><span class="s1">Group()</span><span class="s0">;</span>
+        <span class="s1">Scene telinha = </span><span class="s0">new </span><span class="s1">Scene(loader.load())</span><span class="s0">;</span>
+
+
+        <span class="s1">teste.setScene(telinha)</span><span class="s0">;</span>
+        <span class="s1">teste.setTitle(vu)</span><span class="s0">;</span>
+        <span class="s1">teste.show()</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">cadastroUser(){</span>
+
+    <span class="s1">}</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">launch()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">ConectarBD(){</span>
+
+    <span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">DesconectarBD(){</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

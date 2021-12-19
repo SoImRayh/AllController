@@ -1,8 +1,24 @@
-.background{
-    -fx-background-color:#2E2E48;
-}
+
 
 .screenbackground{
-    -fx-background-color: #202020;
-    -fx-background-image:"src/main/resources/Images/logo.png";
+    -fx-background-color: #2E2E48;
+    -fx-pref-height: 720;
+    -fx-pref-width: 1290;
+}
+.button{
+    -fx-background-color:  #453CAB;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+
+}
+.exitButton{
+    -fx-opacity: 0.6;
+    -fx-background-color: #ff0000;
+}
+.user-icon{
+    -fx-fit-to-height: 78;
+    -fx-fit-to-width: 78;
+}
+.defalt-labels{
+    -fx-text-fill: #ffffff;
 }

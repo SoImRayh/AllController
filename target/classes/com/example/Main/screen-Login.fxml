@@ -4,7 +4,6 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="615.0" style="-fx-background-color: #2E2E48;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="615.0" style="-fx-background-color: #2E2E48;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerLogin">
    <children>
       <Text fill="WHITE" layoutX="34.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário">
          <font>
@@ -27,14 +26,14 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <JFXButton fx:id="BtnEntrar" graphicTextGap="6.0" layoutX="33.0" layoutY="308.0" onAction="#novaTela" prefHeight="37.0" prefWidth="233.0" ripplerFill="WHITE" style="-fx-background-color: #453CAB;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="BtnEntrar" graphicTextGap="6.0" layoutX="33.0" layoutY="308.0" prefHeight="37.0" prefWidth="233.0" ripplerFill="WHITE" style="-fx-background-color: #453CAB;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
       <ImageView fitHeight="430.0" fitWidth="324.0" layoutX="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Images/Medicamentos.png" />
+            <Image url="@../../../images/Medicamentos.png" />
          </image>
          <viewport>
             <Rectangle2D />
@@ -42,7 +41,7 @@
       </ImageView>
       <ImageView fitHeight="47.0" fitWidth="156.0" layoutX="75.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Images/logo.png" />
+            <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
       <JFXCheckBox checkedColor="#453cab" layoutX="34.0" layoutY="258.0" text="Lembrar de mim" textFill="WHITE" wrapText="true">
@@ -62,10 +61,10 @@
          <font>
             <Font size="10.0" />
          </font></Hyperlink>
-      <Label fx:id="texto" layoutX="73.0" layoutY="14.0" text="Seu texto aqui" textFill="WHITE">
+      <JFXButton layoutX="594.0" layoutY="1.0" prefHeight="13.0" prefWidth="13.0" styleClass="exitButton" stylesheets="@../../../CSS/css.css" text="X">
          <font>
-            <Font size="27.0" />
+            <Font size="10.0" />
          </font>
-      </Label>
+      </JFXButton>
    </children>
 </AnchorPane>
