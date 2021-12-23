@@ -16,17 +16,11 @@ public class HelloApplication extends Application {
     }
     @Override
     public void start(Stage stage) throws IOException {
-        telainicial();
-    }
-
-    private void telainicial()throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("screen-Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         //scene.setFill(Color.TRANSPARENT);
 
         Image icon = new Image("icon.png");
-
-        Stage stage = new Stage();
 
         stage.setTitle("AllController");
         stage.setScene(scene);
@@ -35,6 +29,8 @@ public class HelloApplication extends Application {
         stage.getIcons().add(icon);
         stage.show();
     }
+
+
     public static void main(String[] args) {
         launch();
     }

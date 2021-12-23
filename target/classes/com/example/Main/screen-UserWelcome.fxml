@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1290.0" styleClass="screenbackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1290.0" styleClass="screenbackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerUserWelcome">
    <children>
-      <ImageView fitHeight="39.0" fitWidth="128.0" layoutX="683.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/logo.png" />
-         </image>
-      </ImageView>
       <Pane layoutX="187.0" layoutY="75.0" prefHeight="744.0" prefWidth="1197.0" style="-fx-background-color: #353566; -fx-background-radius: 30;">
          <children>
-            <Label layoutX="66.0" layoutY="56.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Bem vindo,">
+            <Label fx:id="labelBemvindo" layoutX="66.0" layoutY="56.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Bem vindo,">
                <font>
                   <Font name="System Bold Italic" size="55.0" />
                </font>
             </Label>
-            <Label fx:id="userName" layoutX="66.0" layoutY="127.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Rayh">
+            <Label fx:id="labelNomeUsuario" layoutX="66.0" layoutY="127.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Rayh">
                <font>
                   <Font size="37.0" />
                </font>
@@ -29,21 +30,6 @@
             <ImageView fitHeight="744.0" fitWidth="171.0" layoutX="910.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/user-screen/texture.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="270.0" fitWidth="170.0" layoutX="138.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/user-screen/icon-pesquisa.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="270.0" fitWidth="170.0" layoutX="354.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/user-screen/icon-processo.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="270.0" fitWidth="170.0" layoutX="541.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/user-screen/icon-produto.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="698.0" fitWidth="57.0" layoutX="849.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
@@ -56,26 +42,103 @@
                   <Image url="@../../../icon.png" />
                </image>
             </ImageView>
+            <Pane fx:id="paneBlanquetas" layoutX="-8.0" layoutY="-5.0" prefHeight="651.0" prefWidth="1112.0">
+               <children>
+                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="59.0" layoutY="70.0" text="Blanquetas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneProcessos" layoutX="2.0" layoutY="5.0" prefHeight="651.0" prefWidth="1112.0">
+               <children>
+                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="59.0" layoutY="70.0" text="Processos" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneProdutos" layoutX="12.0" layoutY="15.0" prefHeight="651.0" prefWidth="1112.0">
+               <children>
+                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="59.0" layoutY="70.0" text="Produtos" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children></Pane>
-      <Pane layoutX="33.0" layoutY="43.0" prefHeight="140.0" prefWidth="121.0">
+      <VBox layoutX="-5.0" layoutY="37.0" prefHeight="685.0" prefWidth="191.0">
          <children>
-            <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="22.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="user-icon">
-               <image>
-                  <Image url="@../../../images/user-screen/icon-user.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="userLogoLabel" layoutX="43.0" layoutY="90.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Rayh">
+            <Pane prefHeight="191.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="58.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="user-icon">
+                     <image>
+                        <Image url="@../../../images/user-screen/icon-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userLogoLabel" layoutX="79.0" layoutY="90.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Rayh">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userTypeLabelLogo" layoutX="56.0" layoutY="118.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Adminisitrador" />
+               </children>
+            </Pane>
+            <Button mnemonicParsing="false" onAction="#produtosTable" prefHeight="85.0" prefWidth="191.0" text="Produtos">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font size="15.0" />
                </font>
-            </Label>
-            <Label fx:id="userTypeLabelLogo" layoutX="23.0" layoutY="118.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Adminisitrador" />
+            </Button>
+            <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#blanquetasTable" prefHeight="68.0" prefWidth="191.0" text="Blanquetas">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#processosTable" prefHeight="85.0" prefWidth="191.0" text="Processos">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
          </children>
-      </Pane>
-      <ImageView fitHeight="210.0" fitWidth="181.0" layoutX="3.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/user-screen/Procurar-blanqueta.png" />
-         </image>
-      </ImageView>
+      </VBox>
+      <Button fx:id="buttonMain" layoutX="632.0" layoutY="5.0" mnemonicParsing="false" onDragDetected="#screenMain" prefHeight="65.0" prefWidth="252.0" style="-fx-background-color: #2E2E48;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="134.0" focusTraversable="true" mouseTransparent="true" onDragDetected="#screenMain" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

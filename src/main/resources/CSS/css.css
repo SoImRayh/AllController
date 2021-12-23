@@ -5,20 +5,39 @@
     -fx-pref-height: 720;
     -fx-pref-width: 1290;
 }
-.button{
-    -fx-background-color:  #453CAB;
-    -fx-text-fill: #ffffff;
-    -fx-border-radius: 5;
-
+.paneBackground{
+    -fx-background-color: #353566;
+    -fx-pref-height: 633;
+    -fx-pref-width: 424;
 }
+
 .exitButton{
     -fx-opacity: 0.6;
     -fx-background-color: #ff0000;
 }
+
 .user-icon{
     -fx-fit-to-height: 78;
     -fx-fit-to-width: 78;
 }
+
 .defalt-labels{
     -fx-text-fill: #ffffff;
+}
+
+.buttonMenu{
+    -fx-background-color: #453CAB;
+    -fx-text-alignment: center;
+}
+.textfieldefalt{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #353566;
+}
+
+.cadButton{
+    -fx-background-color:  #453CAB;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-pref-height: 37;
+    -fx-pref-width: 295;
 }
