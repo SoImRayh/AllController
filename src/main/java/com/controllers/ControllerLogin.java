@@ -1,6 +1,7 @@
 package com.controllers;
 
 //import com.jfoenix.controls.JFXButton;
+import com.example.Main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,15 +13,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.controlsfx.control.action.Action;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class ControllerLogin {
-    private Stage stage1;
-    private Scene scene;
-    private Parent root;
 
     @FXML
     private Button buttonEntrar;
@@ -32,16 +32,8 @@ public class ControllerLogin {
     private TextField labelUsuario;
 
     @FXML
-    public void fazerLogin(ActionEvent e)throws IOException{
-        try {
-            if(labelSenha.getText() != null && labelUsuario.getText() != null){
-                stage1 = new Stage();
-                scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("screen-AdminWelcome.fxml")));
-                stage1.setScene(scene);
-                stage1.show();
-            }
-        }catch (Exception exception){
-            exception.printStackTrace();
-        }
+    protected void fazerLogin(ActionEvent e){
+        HelloApplication.trocarTela(2);
     }
+
 }

@@ -93,9 +93,9 @@
          </children></Pane>
       <MenuButton alignment="CENTER" layoutY="422.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="50.0" prefWidth="189.0" styleClass="buttonMenu" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
         <items>
-          <MenuItem mnemonicParsing="false" text="Processos" />
-            <MenuItem mnemonicParsing="false" text="Produtos" />
-          <MenuItem mnemonicParsing="false" text="Blanquetas" />
+          <MenuItem mnemonicParsing="false" onAction="#cadastroProcessos" text="Processos" />
+            <MenuItem mnemonicParsing="false" onAction="#cadastroProdutos" text="Produtos" />
+          <MenuItem mnemonicParsing="false" onAction="#cadastroBlanquetas" text="Blanquetas" />
         </items>
          <font>
             <Font size="15.0" />

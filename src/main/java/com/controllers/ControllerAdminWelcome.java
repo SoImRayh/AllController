@@ -1,6 +1,7 @@
 
 package com.controllers;
 
+import com.example.Main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,7 +44,7 @@ public class ControllerAdminWelcome implements Initializable {
     private ImageView logo;
 
     @FXML
-    void blanquetasTable(ActionEvent event) {
+    protected void blanquetasTable(ActionEvent event) {
         esconderlabels();
         paneProcessos.setVisible(false);
         paneProdutos.setVisible(false);
@@ -52,7 +53,7 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void processosTable(ActionEvent event) {
+    protected void processosTable(ActionEvent event) {
         esconderlabels();
         paneBlanquetas.setVisible(false);
         paneProdutos.setVisible(false);
@@ -60,19 +61,34 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void produtosTable(ActionEvent event) {
+    protected void produtosTable(ActionEvent event) {
         esconderlabels();
         paneProcessos.setVisible(false);
         paneBlanquetas.setVisible(false);
         paneProdutos.setVisible(true);
     }
     @FXML
-    void screenMain(MouseEvent event) {
+    protected void screenMain(MouseEvent event) {
         paneBlanquetas.setVisible(false);
         paneProdutos.setVisible(false);
         paneProcessos.setVisible(false);
         labelBemvindo.setVisible(true);
         labelNomeUsuario.setVisible(true);
+    }
+
+    @FXML
+    void cadastroBlanquetas(ActionEvent event) {
+        HelloApplication.panescontrol(1);
+    }
+
+    @FXML
+    void cadastroProcessos(ActionEvent event) {
+        HelloApplication.panescontrol(2);
+    }
+
+    @FXML
+    void cadastroProdutos(ActionEvent event) {
+        HelloApplication.panescontrol(3);
     }
 
     private void esconderlabels(){
@@ -81,6 +97,7 @@ public class ControllerAdminWelcome implements Initializable {
         labelNomeUsuario.setVisible(false);
 
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         paneBlanquetas.setVisible(false);
