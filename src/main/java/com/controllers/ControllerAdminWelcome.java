@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -77,18 +79,22 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void cadastroBlanquetas(ActionEvent event) {
+    protected void cadastroBlanquetas(ActionEvent event) {
         HelloApplication.panescontrol(1);
     }
 
     @FXML
-    void cadastroProcessos(ActionEvent event) {
+    protected void cadastroProcessos(ActionEvent event) {
         HelloApplication.panescontrol(2);
     }
 
     @FXML
-    void cadastroProdutos(ActionEvent event) {
+    protected void cadastroProdutos(ActionEvent event) {
         HelloApplication.panescontrol(3);
+    }
+    @FXML
+    protected void cadastroUsuario(ActionEvent event){
+        HelloApplication.panescontrol(4);
     }
 
     private void esconderlabels(){

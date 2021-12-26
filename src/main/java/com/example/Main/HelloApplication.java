@@ -58,41 +58,39 @@ public class HelloApplication extends Application {
 
     public static void trocarTela(int tela){
         switch (tela){
-            case 1:
+            case 1 -> {
                 stage.setScene(loginScene);
-                break;
-            case 2:
+                }
+            case 2-> {
                 stage.setScene(adminScene);
                 stage.setResizable(true);
                 stage.setMaximized(true);
-                break;
+                }
         }
     }
     public static void panescontrol(int pane){
         Stage panes = new Stage();
-        switch (pane){
-            case 1:
+        switch (pane) {
+            case 1 -> {
                 panes.setScene(paneBlanqueta);
                 panes.show();
-                break;
-            case 2:
+            }
+            case 2 -> {
                 panes.setScene(paneProcesso);
                 panes.show();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 panes.setScene(paneProduto);
                 panes.show();
-                break;
-            case 4:
+            }
+            case 4 -> {
                 panes.setScene(paneUsuario);
                 panes.show();
-                break;
+            }
         }
 
     }
     public static void main(String[] args) {
         launch();
     }
-
-
 }

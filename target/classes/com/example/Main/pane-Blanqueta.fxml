@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -40,15 +41,6 @@
          </cursor>
       </TextField>
       <Line endX="141.0" layoutX="218.0" layoutY="350.0" startX="-148.0" stroke="WHITE" />
-      <TextField fx:id="fieldMaquina" focusTraversable="false" layoutX="70.0" layoutY="384.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Máquina" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
-         <font>
-            <Font size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Line endX="141.0" layoutX="221.0" layoutY="417.0" startX="-148.0" stroke="WHITE" />
       <Label alignment="CENTER" layoutX="1.0" layoutY="171.0" prefHeight="39.0" prefWidth="424.0" text="Cadastro de Blanquetas" textFill="WHITE">
          <font>
             <Font size="27.0" />
@@ -61,5 +53,11 @@
             <Font size="15.0" />
          </font>
       </TextField>
+      <ComboBox fx:id="comboBox" editable="true" layoutX="145.0" layoutY="376.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: #353566;" />
+      <Label layoutX="70.0" layoutY="376.0" opacity="0.86" text="Máquina:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
