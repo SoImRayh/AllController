@@ -10,9 +10,14 @@
     -fx-pref-height: 633;
     -fx-pref-width: 424;
 }
+.paneMenu{
+    -fx-background-color: #353566;
+    -fx-background-radius: 10;
+
+}
 
 .exitButton{
-    -fx-opacity: 0.6;
+    -fx-background-radius: 10;
     -fx-background-color: #ff0000;
 }
 
@@ -21,13 +26,21 @@
     -fx-fit-to-width: 78;
 }
 
-.defalt-labels{
-    -fx-text-fill: #ffffff;
-}
-
 .buttonMenu{
     -fx-background-color: #453CAB;
+    -fx-background-radius: 5;
     -fx-text-alignment: center;
+    -fx-pref-height: 40;
+    -fx-pref-width: 190;
+}
+.buttonControle{
+    -fx-background-color: #453CAB;
+    -fx-background-radius: 5;
+    -fx-text-alignment: center;
+    -fx-text-fill: #ffffff;
+    -fx-pref-height: 20;
+    -fx-pref-width: 95;
+
 }
 .textfieldefalt{
     -fx-text-fill: #ffffff;

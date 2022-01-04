@@ -23,31 +23,35 @@
             <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
-      <TextField fx:id="fieldBlanqueta" focusTraversable="false" layoutX="64.0" layoutY="250.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Blanqueta ( posição )" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
-         <font>
-            <Font size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Line endX="141.0" layoutX="215.0" layoutY="283.0" startX="-148.0" stroke="WHITE" />
-      <TextField fx:id="fieldCodigo" focusTraversable="false" layoutX="67.0" layoutY="317.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Código do produto" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
-         <font>
-            <Font size="15.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Line endX="141.0" layoutX="218.0" layoutY="350.0" startX="-148.0" stroke="WHITE" />
-      <Label alignment="CENTER" layoutX="-4.0" layoutY="165.0" prefHeight="35.0" prefWidth="424.0" text="Cadastro de Processo" textFill="WHITE">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Line endX="141.0" layoutX="224.0" layoutY="200.0" startX="-148.0" stroke="WHITE" />
-      <DatePicker fx:id="datapicker" layoutX="71.0" layoutY="385.0" prefHeight="25.0" prefWidth="290.0" promptText="Data" style="-fx-background-color: #453CAB;" />
-      <Button layoutX="64.0" layoutY="556.0" mnemonicParsing="false" styleClass="cadButton" text="Button" />
+      <AnchorPane fx:id="paneCadastrar" layoutX="24.0" layoutY="104.0" prefHeight="479.0" prefWidth="395.0" styleClass="paneMenu">
+         <children>
+            <Label alignment="CENTER" layoutX="-42.0" layoutY="14.0" prefHeight="35.0" prefWidth="424.0" text="Cadastro de Processo" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="141.0" layoutX="184.0" layoutY="49.0" startX="-148.0" stroke="WHITE" />
+            <TextField fx:id="fieldBlanqueta" focusTraversable="false" layoutX="33.0" layoutY="121.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Blanqueta ( posição )" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Line endX="141.0" layoutX="184.0" layoutY="154.0" startX="-148.0" stroke="WHITE" />
+            <TextField fx:id="fieldCodigo" focusTraversable="false" layoutX="34.0" layoutY="194.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Código do produto" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Line endX="141.0" layoutX="176.0" layoutY="227.0" startX="-148.0" stroke="WHITE" />
+            <DatePicker fx:id="datapicker" layoutX="36.0" layoutY="278.0" prefHeight="25.0" prefWidth="290.0" promptText="Data" style="-fx-background-color: #453CAB;" />
+            <Button layoutX="33.0" layoutY="404.0" mnemonicParsing="false" onAction="#cadastrar" styleClass="cadButton" text="Cadastrar" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

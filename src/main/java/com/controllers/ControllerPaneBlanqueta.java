@@ -1,8 +1,12 @@
 package com.controllers;
 
+import com.dao.BlanquetaDao;
+import com.objects.Blanqueta;
+import com.objects.Maquina;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -12,7 +16,12 @@ import java.util.ResourceBundle;
 public class ControllerPaneBlanqueta implements Initializable {
 
     @FXML
-    private ComboBox<String> comboBox;
+    private TextField fieldFaca;
+
+    @FXML
+    private ChoiceBox<Maquina> choiseBox;
+    private Maquina[] maquinas = {Maquina.CD,Maquina.XL,Maquina.KBA};
+
     @FXML
     private Button buttonCadastrar;
 
@@ -30,8 +39,14 @@ public class ControllerPaneBlanqueta implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        comboBox.getItems().add("CD");
-        comboBox.getItems().add("KBA");
-        comboBox.getItems().add("XL");
+        choiseBox.getItems().addAll(maquinas);
+    }
+    @FXML
+    private void inserir(){
+        Blanqueta b = new Blanqueta();
+        b.setLocalizacao(fieldPosicao.getText());
+        b.setMaquina(choiseBox.getValue());
+        b.setFaca((fieldFaca.getText()));
+        b.setRepeticoes( Integer.parseInt(fieldRepeticoes.getText()));
     }
 }

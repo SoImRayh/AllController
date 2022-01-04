@@ -2,11 +2,14 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -44,55 +47,64 @@
                   <Image url="@../../../icon.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" layoutX="-8.0" layoutY="-5.0" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
-                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
+                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
                   </TableView>
-                  <Label layoutX="59.0" layoutY="70.0" text="Blanquetas" textFill="WHITE">
+                  <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Pane fx:id="paneProcessos" layoutX="2.0" layoutY="5.0" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
-                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
+                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                      <columns>
                         <TableColumn prefWidth="75.0" text="C1" />
                         <TableColumn prefWidth="75.0" text="C2" />
                      </columns>
                   </TableView>
-                  <Label layoutX="59.0" layoutY="70.0" text="Processos" textFill="WHITE">
+                  <Label layoutX="455.0" layoutY="20.0" text="Processos" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Pane fx:id="paneProdutos" layoutX="12.0" layoutY="15.0" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneProdutos" prefHeight="651.0" prefWidth="1112.0">
                <children>
-                  <TableView layoutX="48.0" layoutY="277.0" prefHeight="200.0" prefWidth="1002.0" style="-fx-background-color: #602000; -fx-opacity: 1;">
+                  <TableView fx:id="tableProduto" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="C1" />
-                        <TableColumn prefWidth="75.0" text="C2" />
+                        <TableColumn fx:id="colCodgoProduto" prefWidth="251.0" text="Código" />
+                        <TableColumn fx:id="colNomeProduto" minWidth="0.0" prefWidth="406.0" text="Nome" />
+                        <TableColumn fx:id="colEmpresaProduto" minWidth="0.0" prefWidth="399.0" text="Empresa" />
                      </columns>
                   </TableView>
-                  <Label layoutX="59.0" layoutY="70.0" text="Produtos" textFill="WHITE">
+                  <Label layoutX="658.0" layoutY="21.0" text="Produtos" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
+                  <Button fx:id="buttonPesquisar" layoutX="496.0" layoutY="73.0" mnemonicParsing="false" onAction="#pesquisar" styleClass="buttonControle" text="Pesquisar" />
+                  <ChoiceBox fx:id="choiceBoxCatProduto" layoutX="157.0" layoutY="73.0" prefWidth="150.0" />
+                  <Label layoutX="16.0" layoutY="70.0" text="Pesquisar por:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fieldProcurarProduto" layoutX="327.0" layoutY="73.0" />
                </children>
             </Pane>
          </children></Pane>
-      <VBox layoutX="-5.0" layoutY="37.0" prefHeight="685.0" prefWidth="191.0">
+      <VBox layoutX="-5.0" layoutY="37.0" prefHeight="685.0" prefWidth="190.0">
          <children>
-            <Pane prefHeight="191.0" prefWidth="191.0">
+            <Pane prefHeight="190.0" prefWidth="190.0">
                <children>
                   <ImageView fitHeight="78.0" fitWidth="78.0" layoutX="58.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="user-icon">
                      <image>
@@ -107,28 +119,34 @@
                   <Label fx:id="userTypeLabelLogo" layoutX="56.0" layoutY="118.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Adminisitrador" />
                </children>
             </Pane>
-            <Button mnemonicParsing="false" onAction="#produtosTable" prefHeight="85.0" prefWidth="191.0" text="Produtos">
+            <Button contentDisplay="CENTER" defaultButton="true" ellipsisString="produtos" mnemonicParsing="false" onAction="#produtosTable" opacity="0.92" prefHeight="40.0" prefWidth="190.0" styleClass="buttonMenu" stylesheets="@../../../CSS/css.css" text="Produtos" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#blanquetasTable" prefHeight="68.0" prefWidth="191.0" text="Blanquetas">
+            <Separator prefHeight="15.0" prefWidth="191.0" visible="false" />
+            <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#blanquetasTable" prefHeight="68.0" prefWidth="191.0" styleClass="buttonMenu" text="Blanquetas" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#processosTable" prefHeight="85.0" prefWidth="191.0" text="Processos">
+            <Separator prefHeight="15.0" prefWidth="200.0" visible="false" />
+            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#processosTable" prefHeight="85.0" prefWidth="191.0" styleClass="buttonMenu" text="Processos" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <MenuButton mnemonicParsing="false" text="MenuButton">
+            <Separator prefHeight="78.0" prefWidth="191.0" visible="false" />
+            <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="56.0" prefWidth="191.0" styleClass="buttonMenu" text="Manutenção" textFill="WHITE">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#cadastroBlanquetas" text="Blanquetas" />
                   <MenuItem mnemonicParsing="false" onAction="#cadastroProcessos" text="Processos" />
                   <MenuItem mnemonicParsing="false" onAction="#cadastroProdutos" text="Produtos" />
                 <MenuItem mnemonicParsing="false" onAction="#cadastroUsuario" text="Usuario" />
               </items>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </MenuButton>
          </children>
       </VBox>

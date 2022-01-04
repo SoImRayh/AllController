@@ -1,5 +1,7 @@
 package com.example.Main;
 
+import com.dao.BlanquetaDao;
+import com.objects.Blanqueta;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,11 +17,14 @@ public class HelloApplication extends Application {
 
     private static Stage stage;
     private static Scene loginScene,adminScene,paneBlanqueta,paneProcesso,paneProduto,paneUsuario;
+    public static Image icon;
 
 
 
     @Override
     public void start(Stage primarystage) throws Exception {
+
+
         stage = primarystage;
 
         //--------------------------* criando um cache de telas *-----------------------------------
@@ -47,7 +52,7 @@ public class HelloApplication extends Application {
         paneUsuario = new Scene(fxmlUsuario);
 
         //configurações do stage
-        Image icon = new Image("icon.png");
+        icon = new Image("icon.png");
         stage.setTitle("AllController");
         stage.setScene(loginScene);
         stage.setResizable(false);
@@ -70,21 +75,26 @@ public class HelloApplication extends Application {
     }
     public static void panescontrol(int pane){
         Stage panes = new Stage();
+        panes.getIcons().add(icon);
         switch (pane) {
             case 1 -> {
                 panes.setScene(paneBlanqueta);
+                panes.setTitle("gerenciar Blanquetas");
                 panes.show();
             }
             case 2 -> {
                 panes.setScene(paneProcesso);
+                panes.setTitle("gerenciar Processos");
                 panes.show();
             }
             case 3 -> {
                 panes.setScene(paneProduto);
+                panes.setTitle("gerenciar Produtos");
                 panes.show();
             }
             case 4 -> {
                 panes.setScene(paneUsuario);
+                panes.setTitle("gerenciar Usuarios");
                 panes.show();
             }
         }

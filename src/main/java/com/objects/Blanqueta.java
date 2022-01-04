@@ -1,55 +1,86 @@
 package com.objects;
 
 public class Blanqueta {
-
-    private String position;
-    private String machine;
+    private Maquina maquina;
+    private String localizacao;
     private String faca;
-    private int expositions;
+    private String obs;
+    private Double id;
+    private Integer repeticoes;
 
-    Blanqueta() {
-        String position = "A1"; // position ex: A1, E3
-        String machine = "";    //CD / KBA / XL
-        String faca = "";       // ex: faca 172, 173
+    public Blanqueta(){
+
+    }
+
+    public Blanqueta(String posicao,String maquina, int fac, int exposicoes) {
+        String position = posicao; // position ex: A1, E3
+        String machine =maquina;    //CD / KBA / XL
+        int faca = 4560;       // ex: faca 172, 173
         int expositions = 6;    //number of expositions 3,4,6++
 
     }
 
     // getters and setters
 
-    public String getPosition() {
-        return this.position;
+
+    public String getObs() {
+        return obs;
     }
 
-    public String getMachine() {
-        return machine;
+    public Double getId() {
+        return id;
+    }
+
+    public String getLocalizacao() {
+        return this.localizacao;
+    }
+
+    public Maquina getMaquina() {
+        return this.maquina;
     }
 
     public String getFaca() {
-        return faca;
+        return this.faca;
     }
 
-    public int getExpositions() {
-        return expositions;
+    public int getRepeticoes() {
+        return repeticoes;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
     }
 
-    public void setExpositions(int expositions) {
-        this.expositions = expositions;
+    public void setRepeticoes(int repeticoes) {
+        this.repeticoes = repeticoes;
     }
 
     public void setFaca(String faca) {
         this.faca = faca;
     }
 
-    public void setMachine(String machine) {
-        this.machine = machine;
+    public void setMaquina(Maquina maquina) {
+        this.maquina = maquina;
     }
 
 
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
+
+    public void setId(Double id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Blanqueta{" +
+                "localizacao='" + localizacao + '\'' +
+                ", maquina=" + maquina +
+                ", faca=" + faca +
+                ", exposicoes=" + repeticoes +
+                '}';
+    }
 }
 
 

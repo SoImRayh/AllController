@@ -40,7 +40,7 @@
          </cursor>
       </TextField>
       <Line endX="141.0" layoutX="218.0" layoutY="350.0" startX="-148.0" stroke="WHITE" />
-      <TextField fx:id="fieldCliente" focusTraversable="false" layoutX="70.0" layoutY="384.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Cliente" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="fieldCliente" focusTraversable="false" layoutX="70.0" layoutY="384.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Cliente" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" text="1">
          <font>
             <Font size="15.0" />
          </font>
@@ -55,6 +55,81 @@
          </font>
       </Label>
       <Line endX="162.0" layoutX="221.0" layoutY="210.0" opacity="0.76" startX="-172.0" stroke="WHITE" strokeWidth="3.0" />
-      <Button fx:id="buttonCadastrar" layoutX="70.0" layoutY="529.0" mnemonicParsing="false" styleClass="cadButton" text="Cadastrar" />
+      <Button fx:id="buttonCadastrar" layoutX="65.0" layoutY="492.0" mnemonicParsing="false" onAction="#cadastrar" styleClass="cadButton" text="Cadastrar" />
+      <Button fx:id="buttonAtualizar" layoutX="239.0" layoutY="582.0" mnemonicParsing="false" onAction="#atualizarPane" styleClass="buttonControle" text="Atualizar" />
+      <Button fx:id="buttonExclrui" layoutX="84.0" layoutY="582.0" mnemonicParsing="false" onAction="#excluirPane" styleClass="buttonControle" text="Excluir" />
+      <AnchorPane layoutX="29.0" layoutY="86.0" prefHeight="517.0" prefWidth="352.0" styleClass="paneMenu" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="45.0" prefHeight="25.0" prefWidth="352.0" text="Excluir" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldCodExcluir" layoutX="176.0" layoutY="129.0" />
+            <Label layoutX="14.0" layoutY="124.0" text="Cod. Produto" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCodExcluir" layoutX="14.0" layoutY="223.0" text="Cod. Produto: " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNomeExcluir" layoutX="14.0" layoutY="265.0" text="Nome do Produto: " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmpresaExcluir" layoutX="14.0" layoutY="311.0" text="Empresa do Produto: " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="129.0" layoutY="400.0" mnemonicParsing="false" onAction="#excluirProduto" prefHeight="39.0" prefWidth="149.0" styleClass="buttonControle" text="Excluir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="39.0" layoutY="96.0" prefHeight="474.0" prefWidth="360.0" styleClass="paneMenu" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="45.0" prefHeight="25.0" prefWidth="352.0" text="Atualizar" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fieldCodAtualizar" layoutX="176.0" layoutY="129.0" />
+            <Label layoutX="14.0" layoutY="124.0" text="Cod. Produto" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCodExcluir1" layoutX="7.0" layoutY="229.0" text="Cod. Produto: " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNomeExcluir1" layoutX="6.0" layoutY="271.0" text="Nome do Produto: " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmpresaExcluir1" layoutX="7.0" layoutY="317.0" text="Empresa do Produto: " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="129.0" layoutY="400.0" mnemonicParsing="false" onAction="#atualizarProduto" prefHeight="39.0" prefWidth="149.0" styleClass="buttonControle" text="Atualizar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="fieldNomeAtualizarFinal" layoutX="211.0" layoutY="268.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="fieldEmpresaAtualizarFinal" layoutX="211.0" layoutY="314.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="fieldCodAtualizarFinal" layoutX="211.0" layoutY="226.0" prefHeight="25.0" prefWidth="149.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

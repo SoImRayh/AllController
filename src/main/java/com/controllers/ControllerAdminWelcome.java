@@ -1,22 +1,39 @@
 
 package com.controllers;
 
+import com.dao.ProdutoDao;
 import com.example.Main.HelloApplication;
+import com.objects.Produto;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControllerAdminWelcome implements Initializable {
+
+
+    @FXML
+    private TableView<Produto> tableProduto;
+
+    @FXML
+    private TableColumn<Produto , String> colCodgoProduto;
+
+    @FXML
+    private TableColumn<Produto , String> colEmpresaProduto;
+
+    @FXML
+    private TableColumn<Produto , String> colNomeProduto;
 
     @FXML
     private Label labelBemvindo;
@@ -96,6 +113,14 @@ public class ControllerAdminWelcome implements Initializable {
     protected void cadastroUsuario(ActionEvent event){
         HelloApplication.panescontrol(4);
     }
+    @FXML
+    protected void pesquisar(ActionEvent e){
+        ProdutoDao dao = new ProdutoDao();
+        List<Produto> li = dao.todos();
+        ObservableList<Produto> list = FXCollections.observableArrayList(li);
+        System.out.println(li);
+        tableProduto.setItems(list);
+    }
 
     private void esconderlabels(){
 
@@ -109,6 +134,13 @@ public class ControllerAdminWelcome implements Initializable {
         paneBlanquetas.setVisible(false);
         paneProcessos.setVisible(false);
         paneProdutos.setVisible(false);
+        //========================================
+
+
+        colNomeProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("name"));
+        colEmpresaProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("empresa"));
+        colCodgoProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("code"));
+
     }
     }
 

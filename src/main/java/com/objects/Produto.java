@@ -6,12 +6,25 @@ public class Produto {
     private String empresa;
     private String code;
 
-    Produto(){
-        String name = ""; //name of product
-        String company = "";//name of client
-        String code = ""; //code of product
+    public Produto(){
+
+    }
+    public Produto(String nome,String empresa, String codigo){
+      this.name = nome;
+      this.empresa = empresa;
+      this.code = codigo;
     }
         //getters and setters
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "name='" + name + '\'' +
+                ", empresa='" + empresa + '\'' +
+                ", code='" + code + '\'' +
+                '}';
+    }
+
     public void setCode(String code) {
         this.code = code;
     }
