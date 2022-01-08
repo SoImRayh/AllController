@@ -20,7 +20,7 @@ public class ProdutoDao implements IProdutoDao{
 
             ps.setString(1,produto.getCode());
             ps.setString(2, produto.getName());
-            ps.setString(3, produto.getEmpresa());
+            ps.setInt(3, produto.getEmpresa());
 
             ps.execute();
         } catch (SQLException e) {
@@ -68,7 +68,7 @@ public class ProdutoDao implements IProdutoDao{
             ResultSet rs = pS.executeQuery();
             while(rs.next()){
                 String nome = rs.getString("nome");
-                String empresa = rs.getString("empresa");
+                Integer empresa = rs.getInt("fk_empresa_id");
                 String codigo = rs.getString("codigo");
 
                 Produto p = new Produto(nome,empresa,codigo);
@@ -96,7 +96,7 @@ public class ProdutoDao implements IProdutoDao{
 
             while(rs.next()){
                 String nome = rs.getString("nome");
-                String empresa = rs.getString(("empresa"));
+                Integer empresa = rs.getInt(("empresa"));
                 String codigo = rs.getString("codigo");
 
                 Produto p = new Produto(nome,empresa,codigo);
@@ -122,7 +122,7 @@ public class ProdutoDao implements IProdutoDao{
 
             while(rs.next()){
                 String nome = rs.getString("nome");
-                String empresa =  rs.getString("empresa");
+                Integer empresa =  rs.getInt("empresa");
                 String codigo = rs.getString("codigo");
 
                 p = new Produto(nome,empresa,codigo);

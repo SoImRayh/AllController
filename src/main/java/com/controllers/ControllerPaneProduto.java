@@ -79,7 +79,7 @@ public class ControllerPaneProduto {
     void cadastrar(){
         ProdutoDao dao = new ProdutoDao();
         if (fieldNome.getText() != "" && fieldCodigo.getText() != "" && fieldCliente.getText() !=""){
-            Produto p = new Produto(fieldNome.getText(), fieldCliente.getText(), fieldCodigo.getText());
+            Produto p = new Produto(fieldNome.getText(), Integer.parseInt(fieldCliente.getText()), fieldCodigo.getText());
             dao.salvar(p);
         }else{
             System.out.println("preecha todos os campos corretamente");

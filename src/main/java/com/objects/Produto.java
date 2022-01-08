@@ -3,13 +3,13 @@ package com.objects;
 public class Produto {
 
     private String name;
-    private String empresa;
+    private Integer empresa;
     private String code;
 
     public Produto(){
 
     }
-    public Produto(String nome,String empresa, String codigo){
+    public Produto(String nome,Integer empresa, String codigo){
       this.name = nome;
       this.empresa = empresa;
       this.code = codigo;
@@ -29,7 +29,7 @@ public class Produto {
         this.code = code;
     }
 
-    public void setEmpresa(String empresa) {
+    public void setEmpresa(int empresa) {
         this.empresa = empresa;
     }
 
@@ -41,7 +41,7 @@ public class Produto {
         return code;
     }
 
-    public String getEmpresa() {
+    public int getEmpresa() {
         return empresa;
     }
 

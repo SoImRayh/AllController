@@ -1,8 +1,11 @@
 
 package com.controllers;
 
+import com.dao.BlanquetaDao;
 import com.dao.ProdutoDao;
 import com.example.Main.HelloApplication;
+import com.objects.Blanqueta;
+import com.objects.Maquina;
 import com.objects.Produto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +25,27 @@ import java.util.ResourceBundle;
 
 public class ControllerAdminWelcome implements Initializable {
 
+    @FXML
+    private TableView<Blanqueta> tableBlanqueta;
+
+
+    @FXML
+    private TableColumn<String, Blanqueta> columnFacaBlanqueta;
+
+    @FXML
+    private TableColumn<Integer , Blanqueta> columnIdBlanqueta;
+
+    @FXML
+    private TableColumn<String , Blanqueta> columnLovalizacaoBlanqueta;
+
+    @FXML
+    private TableColumn<Maquina, Blanqueta> columnMaquinaBlanqueta;
+
+    @FXML
+    private TableColumn<String , Blanqueta> columnObsBlanqueta;
+
+    @FXML
+    private TableColumn<Integer , Blanqueta> columnReoeticoesBlanqueta;
 
     @FXML
     private TableView<Produto> tableProduto;
@@ -69,6 +93,14 @@ public class ControllerAdminWelcome implements Initializable {
         paneProdutos.setVisible(false);
         paneBlanquetas.setVisible(true);
 
+        BlanquetaDao dao  = new BlanquetaDao();
+        List<Blanqueta> lista;
+        lista = dao.todas();
+        System.out.println(lista);
+        ObservableList<Blanqueta> observableList = FXCollections.observableArrayList(lista);
+
+        tableBlanqueta.setItems(observableList);
+
     }
 
     @FXML
@@ -114,11 +146,14 @@ public class ControllerAdminWelcome implements Initializable {
         HelloApplication.panescontrol(4);
     }
     @FXML
+    protected void cadastrarEmpresa(ActionEvent event){
+        HelloApplication.panescontrol(5);
+    }
+    @FXML
     protected void pesquisar(ActionEvent e){
         ProdutoDao dao = new ProdutoDao();
         List<Produto> li = dao.todos();
         ObservableList<Produto> list = FXCollections.observableArrayList(li);
-        System.out.println(li);
         tableProduto.setItems(list);
     }
 
@@ -136,10 +171,18 @@ public class ControllerAdminWelcome implements Initializable {
         paneProdutos.setVisible(false);
         //========================================
 
-
+//        configuração para as colunas da table views
         colNomeProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("name"));
         colEmpresaProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("empresa"));
         colCodgoProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("code"));
+
+        columnFacaBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("faca"));
+        columnIdBlanqueta.setCellValueFactory(new PropertyValueFactory<Integer, Blanqueta>("ID"));
+        columnLovalizacaoBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("localização"));
+        columnMaquinaBlanqueta.setCellValueFactory(new PropertyValueFactory<Maquina, Blanqueta>("Maquina"));
+        columnReoeticoesBlanqueta.setCellValueFactory(new PropertyValueFactory<Integer, Blanqueta>("Repetições"));
+        columnObsBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("Observações"));
+
 
     }
     }

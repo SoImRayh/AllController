@@ -47,12 +47,16 @@
                   <Image url="@../../../icon.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
                <children>
                   <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="C1" />
-                        <TableColumn prefWidth="75.0" text="C2" />
+                        <TableColumn fx:id="columnIdBlanqueta" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="columnLovalizacaoBlanqueta" prefWidth="104.0" text="localização" />
+                        <TableColumn fx:id="columnFacaBlanqueta" prefWidth="98.0" text="faca" />
+                        <TableColumn fx:id="columnMaquinaBlanqueta" prefWidth="161.0" text="maquina" />
+                        <TableColumn fx:id="columnReoeticoesBlanqueta" prefWidth="167.0" text="repetições" />
+                        <TableColumn fx:id="columnObsBlanqueta" prefWidth="451.0" text="OBS" />
                      </columns>
                   </TableView>
                   <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
@@ -77,7 +81,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane fx:id="paneProdutos" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneProdutos" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
                   <TableView fx:id="tableProduto" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                      <columns>
@@ -143,6 +147,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#cadastroProcessos" text="Processos" />
                   <MenuItem mnemonicParsing="false" onAction="#cadastroProdutos" text="Produtos" />
                 <MenuItem mnemonicParsing="false" onAction="#cadastroUsuario" text="Usuario" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarEmpresa" text="Empresa" />
               </items>
                <font>
                   <Font size="15.0" />

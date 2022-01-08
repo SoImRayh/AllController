@@ -44,9 +44,14 @@ public class ControllerPaneBlanqueta implements Initializable {
     @FXML
     private void inserir(){
         Blanqueta b = new Blanqueta();
+        BlanquetaDao dao = new BlanquetaDao();
+
         b.setLocalizacao(fieldPosicao.getText());
         b.setMaquina(choiseBox.getValue());
         b.setFaca((fieldFaca.getText()));
         b.setRepeticoes( Integer.parseInt(fieldRepeticoes.getText()));
+        b.setObs(fieldObservacoes.getText());
+
+        dao.salvar(b);
     }
 }

@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.31">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>800</IntrospectionStateNumber>
+      <IntrospectionStateNumber>817</IntrospectionStateNumber>
       <ServerVersion>14.1</ServerVersion>
-      <StartupTime>1641146830</StartupTime>
+      <StartupTime>1641382839</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -789,7 +789,6 @@ false Zulu
 </TimeZones>
     </root>
     <database id="2" parent="1" name="AllController">
-      <Comment>Banco de dados para o projeto integrador de POO</Comment>
       <Current>1</Current>
       <Grants>11||10|C|G
 11||-9223372036854775808|U|G
@@ -801,8 +800,13 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>801</IntrospectionStateNumber>
-      <ObjectId>16463</ObjectId>
+      <IntrospectionStateNumber>818</IntrospectionStateNumber>
+      <ObjectId>16530</ObjectId>
+      <Relations>sequence|table|24670|24671|5
+sequence|table|24681|24682|2
+sequence|table|24690|24691|3
+sequence|table|24711|24712|1
+</Relations>
       <OwnerName>postgres</OwnerName>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -4227,290 +4231,325 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>801</IntrospectionStateNumber>
+      <IntrospectionStateNumber>818</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <table id="263" parent="262" name="blanqueta">
-      <ObjectId>16473</ObjectId>
-      <StateNumber>795</StateNumber>
+    <sequence id="263" parent="262" name="blanqueta_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>24670</ObjectId>
+      <StateNumber>811</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="264" parent="262" name="compativel_fk_blanqueta_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>24711</ObjectId>
+      <StateNumber>811</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="265" parent="262" name="empresa_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>24681</ObjectId>
+      <StateNumber>811</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="266" parent="262" name="produto_fk_empresa_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>24690</ObjectId>
+      <StateNumber>811</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="267" parent="262" name="blanqueta">
+      <ObjectId>24671</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="264" parent="262" name="compativel">
-      <ObjectId>16508</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="268" parent="262" name="compativel">
+      <ObjectId>24712</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="265" parent="262" name="empresa">
-      <ObjectId>16482</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="269" parent="262" name="empresa">
+      <ObjectId>24682</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="266" parent="262" name="processado">
-      <ObjectId>16503</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="270" parent="262" name="processado">
+      <ObjectId>24706</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="267" parent="262" name="producao">
-      <ObjectId>16470</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="271" parent="262" name="producao">
+      <ObjectId>24667</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="268" parent="262" name="produto">
-      <ObjectId>16489</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="272" parent="262" name="produto">
+      <ObjectId>24691</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="262" name="usuario">
-      <ObjectId>16496</ObjectId>
-      <StateNumber>795</StateNumber>
+    <table id="273" parent="262" name="usuario">
+      <ObjectId>24699</ObjectId>
+      <StateNumber>811</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="270" parent="263" name="localizacao">
+    <column id="274" parent="267" name="localizacao">
       <DataType>varchar|0s</DataType>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="271" parent="263" name="faca">
+    <column id="275" parent="267" name="faca">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="272" parent="263" name="repeticoes">
+    <column id="276" parent="267" name="repeticoes">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="273" parent="263" name="obs">
+    <column id="277" parent="267" name="obs">
       <DataType>varchar|0s</DataType>
       <Position>4</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="274" parent="263" name="id">
+    <column id="278" parent="267" name="id">
       <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;blanqueta_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="275" parent="263" name="maquina">
+    <column id="279" parent="267" name="maquina">
       <DataType>varchar|0s</DataType>
       <Position>6</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="276" parent="263" name="blanqueta_localizacao_key">
+    <index id="280" parent="267" name="blanqueta_localizacao_key">
       <ClassIds>3126</ClassIds>
       <ColNames>localizacao</ColNames>
       <CollationIds>100</CollationIds>
       <CollationNames>default</CollationNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16480</ObjectId>
-      <StateNumber>795</StateNumber>
+      <ObjectId>24679</ObjectId>
+      <StateNumber>811</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="277" parent="263" name="blanqueta_pkey">
+    <index id="281" parent="267" name="blanqueta_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16478</ObjectId>
+      <ObjectId>24677</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="278" parent="263" name="blanqueta_pkey">
+    <key id="282" parent="267" name="blanqueta_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16479</ObjectId>
+      <ObjectId>24678</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
-      <UnderlyingIndexId>16478</UnderlyingIndexId>
+      <StateNumber>811</StateNumber>
+      <UnderlyingIndexId>24677</UnderlyingIndexId>
     </key>
-    <key id="279" parent="263" name="blanqueta_localizacao_key">
+    <key id="283" parent="267" name="blanqueta_localizacao_key">
       <ColNames>localizacao</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16481</ObjectId>
-      <StateNumber>795</StateNumber>
-      <UnderlyingIndexId>16480</UnderlyingIndexId>
+      <ObjectId>24680</ObjectId>
+      <StateNumber>811</StateNumber>
+      <UnderlyingIndexId>24679</UnderlyingIndexId>
     </key>
-    <column id="280" parent="264" name="fk_blanqueta_id">
+    <column id="284" parent="268" name="fk_blanqueta_id">
       <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;compativel_fk_blanqueta_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="281" parent="264" name="fk_compativel_1">
+    <foreign-key id="285" parent="268" name="fk_compativel_1">
       <ColNames>fk_blanqueta_id</ColNames>
-      <ObjectId>16521</ObjectId>
+      <ObjectId>24726</ObjectId>
       <OnDelete>set-null</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>5</RefColPositions>
       <RefKeyName>blanqueta_pkey</RefKeyName>
-      <StateNumber>795</StateNumber>
-      <RefTableId>16473</RefTableId>
+      <StateNumber>811</StateNumber>
+      <RefTableId>24671</RefTableId>
       <RefTableName>blanqueta</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="282" parent="265" name="nome">
+    <column id="286" parent="269" name="nome">
       <DataType>varchar|0s</DataType>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="265" name="id">
+    <column id="287" parent="269" name="id">
       <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;empresa_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="284" parent="265" name="empresa_pkey">
+    <index id="288" parent="269" name="empresa_pkey">
       <ClassIds>1978</ClassIds>
       <ColNames>id</ColNames>
       <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16487</ObjectId>
+      <ObjectId>24688</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="285" parent="265" name="empresa_pkey">
+    <key id="289" parent="269" name="empresa_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16488</ObjectId>
+      <ObjectId>24689</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
-      <UnderlyingIndexId>16487</UnderlyingIndexId>
+      <StateNumber>811</StateNumber>
+      <UnderlyingIndexId>24688</UnderlyingIndexId>
     </key>
-    <column id="286" parent="266" name="fk_produto_codigo">
+    <column id="290" parent="270" name="fk_produto_codigo">
       <DataType>varchar|0s</DataType>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="287" parent="266" name="fk_processado_1">
+    <foreign-key id="291" parent="270" name="fk_processado_1">
       <ColNames>fk_produto_codigo</ColNames>
-      <ObjectId>16516</ObjectId>
+      <ObjectId>24721</ObjectId>
       <OnDelete>set-null</OnDelete>
       <RefColNames>codigo</RefColNames>
       <RefColPositions>1</RefColPositions>
       <RefKeyName>produto_pkey</RefKeyName>
-      <StateNumber>795</StateNumber>
-      <RefTableId>16489</RefTableId>
+      <StateNumber>811</StateNumber>
+      <RefTableId>24691</RefTableId>
       <RefTableName>produto</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="288" parent="267" name="data">
+    <column id="292" parent="271" name="data">
       <DataType>date|0s</DataType>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="289" parent="268" name="codigo">
+    <column id="293" parent="272" name="codigo">
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="290" parent="268" name="nome">
+    <column id="294" parent="272" name="nome">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="291" parent="268" name="fk_empresa_id">
+    <column id="295" parent="272" name="fk_empresa_id">
       <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;produto_fk_empresa_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="292" parent="268" name="fk_produto_2">
+    <foreign-key id="296" parent="272" name="fk_produto_2">
       <ColNames>fk_empresa_id</ColNames>
-      <ObjectId>16511</ObjectId>
+      <ObjectId>24716</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>2</RefColPositions>
       <RefKeyName>empresa_pkey</RefKeyName>
-      <StateNumber>795</StateNumber>
-      <RefTableId>16482</RefTableId>
+      <StateNumber>811</StateNumber>
+      <RefTableId>24682</RefTableId>
       <RefTableName>empresa</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="293" parent="268" name="produto_pkey">
+    <index id="297" parent="272" name="produto_pkey">
       <ClassIds>3126</ClassIds>
       <ColNames>codigo</ColNames>
       <CollationIds>100</CollationIds>
       <CollationNames>default</CollationNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16494</ObjectId>
+      <ObjectId>24697</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="294" parent="268" name="produto_pkey">
+    <key id="298" parent="272" name="produto_pkey">
       <ColNames>codigo</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16495</ObjectId>
+      <ObjectId>24698</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
-      <UnderlyingIndexId>16494</UnderlyingIndexId>
+      <StateNumber>811</StateNumber>
+      <UnderlyingIndexId>24697</UnderlyingIndexId>
     </key>
-    <column id="295" parent="269" name="cpf">
-      <DataType>varchar|0s</DataType>
+    <column id="299" parent="273" name="cpf">
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>795</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>811</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <column id="296" parent="269" name="nome">
+    <column id="300" parent="273" name="nome">
       <DataType>varchar|0s</DataType>
       <Position>2</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="269" name="tipo">
+    <column id="301" parent="273" name="tipo">
       <DataType>boolean|0s</DataType>
       <Position>3</Position>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="298" parent="269" name="usuario_pkey">
-      <ClassIds>3126</ClassIds>
+    <column id="302" parent="273" name="senha">
+      <DataType>varchar|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>811</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="303" parent="273" name="usuario_pkey">
+      <ClassIds>3124</ClassIds>
       <ColNames>cpf</ColNames>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
+      <CollationIds>0</CollationIds>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16501</ObjectId>
+      <ObjectId>24704</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
+      <StateNumber>811</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="299" parent="269" name="usuario_pkey">
+    <key id="304" parent="273" name="usuario_pkey">
       <ColNames>cpf</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16502</ObjectId>
+      <ObjectId>24705</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>795</StateNumber>
-      <UnderlyingIndexId>16501</UnderlyingIndexId>
+      <StateNumber>811</StateNumber>
+      <UnderlyingIndexId>24704</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

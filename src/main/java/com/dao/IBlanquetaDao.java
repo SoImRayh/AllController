@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface IBlanquetaDao {
     Blanqueta salvar(Blanqueta blanqueta);
     Blanqueta atualizar(Blanqueta blanqueta);
-    void deletar(long id);
+    void deletar(int id);
     List<Blanqueta> todas();
     Optional<Blanqueta> acharPorPosicao(String posicao);
     List<Blanqueta> acharPorMaquina(Maquina manquina);

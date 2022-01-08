@@ -5,14 +5,14 @@ public class Blanqueta {
     private String localizacao;
     private String faca;
     private String obs;
-    private Double id;
+    private Integer id = null;
     private Integer repeticoes;
 
     public Blanqueta(){
 
     }
 
-    public Blanqueta(String posicao,String maquina, int fac, int exposicoes) {
+    public Blanqueta(String posicao,String maquina, String fac, int exposicoes) {
         String position = posicao; // position ex: A1, E3
         String machine =maquina;    //CD / KBA / XL
         int faca = 4560;       // ex: faca 172, 173
@@ -27,7 +27,7 @@ public class Blanqueta {
         return obs;
     }
 
-    public Double getId() {
+    public int getId() {
         return id;
     }
 
@@ -68,7 +68,7 @@ public class Blanqueta {
         this.obs = obs;
     }
 
-    public void setId(Double id) {
+    public void setId(int id) {
         this.id = id;
     }
 

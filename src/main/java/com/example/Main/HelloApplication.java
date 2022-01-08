@@ -3,6 +3,7 @@ package com.example.Main;
 import com.dao.BlanquetaDao;
 import com.objects.Blanqueta;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     private static Stage stage;
-    private static Scene loginScene,adminScene,paneBlanqueta,paneProcesso,paneProduto,paneUsuario;
+    private static Scene loginScene,adminScene,paneBlanqueta,paneProcesso,paneProduto,paneUsuario,paneEmpresa;
     public static Image icon;
 
 
@@ -50,6 +51,9 @@ public class HelloApplication extends Application {
 
         Parent fxmlUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
         paneUsuario = new Scene(fxmlUsuario);
+
+        Parent fxmlEmpresa = FXMLLoader.load(HelloApplication.class.getResource("pane-Empresa.fxml"));
+        paneEmpresa = new Scene(fxmlEmpresa);
 
         //configurações do stage
         icon = new Image("icon.png");
@@ -95,6 +99,11 @@ public class HelloApplication extends Application {
             case 4 -> {
                 panes.setScene(paneUsuario);
                 panes.setTitle("gerenciar Usuarios");
+                panes.show();
+            }
+            case 5 -> {
+                panes.setScene(paneEmpresa);
+                panes.setTitle("gerenciar Empresas");
                 panes.show();
             }
         }
