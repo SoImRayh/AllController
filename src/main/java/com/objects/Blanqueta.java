@@ -1,11 +1,11 @@
 package com.objects;
 
 public class Blanqueta {
-    private Maquina maquina;
-    private String localizacao;
-    private String faca;
-    private String obs;
-    private Integer id = null;
+    private Maquina maquina;//
+    private String localizacao;//
+    private String faca;//
+    private String obs;//
+    private Integer id = null;//
     private Integer repeticoes;
 
     public Blanqueta(){

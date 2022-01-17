@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Processo {
     //atributos
-    private Date data;
-    private Produto produto;
-    private Blanqueta blanqueta;
+    private Date data;//
+    private Produto produto;//
+    private Blanqueta blanqueta;//
 
     public Processo(Date data,Produto produto,Blanqueta blanqueta ){
         this.blanqueta = blanqueta;

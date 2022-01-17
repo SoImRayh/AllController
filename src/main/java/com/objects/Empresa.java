@@ -2,7 +2,7 @@ package com.objects;
 
 public class Empresa {
     //atributos
-    String nome;
+    String nome;//
     int id;
 
     public Empresa(){}

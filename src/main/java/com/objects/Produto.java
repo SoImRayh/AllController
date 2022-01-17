@@ -2,9 +2,9 @@ package com.objects;
 
 public class Produto {
 
-    private String name;
-    private Integer empresa;
-    private String code;
+    private String name;//
+    private Integer empresa;//
+    private String code;//
 
     public Produto(){
 
