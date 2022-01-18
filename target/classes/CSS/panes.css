@@ -3,6 +3,8 @@
 
 .paneMenu{
     -fx-background-color: #353566;
+    -fx-pref-height: 600;
+    -fx-pref-width: 400;
 
 }
 
