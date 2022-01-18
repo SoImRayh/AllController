@@ -13,7 +13,7 @@ public class ControllerPaneProdutoExcluir {
     @FXML
     private Label labelCodExcluir;
 
-    @FXML
+    @FXML//
     void excluirProduto(ActionEvent event) {
 
     }
