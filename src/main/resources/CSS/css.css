@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .screenbackground{
     -fx-background-color: #2E2E48;
@@ -27,11 +27,22 @@
 }
 
 .buttonMenu{
-    -fx-background-color: #453CAB;
-    -fx-background-radius: 5;
+    -fx-background-color: #2E2E48;
     -fx-text-alignment: center;
     -fx-pref-height: 40;
     -fx-pref-width: 190;
+    -fx-transition-duration: 500ms;
+}
+
+.buttonMenu:hover{
+    -fx-background-color: #1F1F31;
+    -fx-border-color: #5B4DFF;
+    -fx-border-width: 0px 0px 0px 15px;
+}
+
+.buttonMenu:pressed{
+    -fx-background-color: #5B4DFF;
+
 }
 .buttonControle{
     -fx-background-color: #453CAB;
@@ -42,6 +53,18 @@
     -fx-pref-width: 95;
 
 }
+
+.buttonControle:hover{
+    -fx-background-radius: 0;
+    -fx-opacity:0.85;
+
+}
+
+.buttonControle:pressed {
+    -fx-background-radius:0;
+    -fx-background-color: #483FBD;
+}
+
 .textfieldefalt{
     -fx-text-fill: #ffffff;
     -fx-background-color: #353566;

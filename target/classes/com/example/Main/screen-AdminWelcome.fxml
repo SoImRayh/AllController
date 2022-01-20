@@ -30,22 +30,27 @@
                   <Font size="37.0" />
                </font>
             </Label>
-            <ImageView fitHeight="744.0" fitWidth="171.0" layoutX="910.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="775.0" fitWidth="171.0" layoutX="1027.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/user-screen/texture.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="698.0" fitWidth="57.0" layoutX="849.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="793.0" fitWidth="41.0" layoutX="966.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/user-screen/texture2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="227.0" fitWidth="266.0" layoutX="236.0" layoutY="181.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="470.0" fitWidth="616.0" layoutX="225.0" layoutY="181.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../icon.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
+            <ImageView fitHeight="775.0" fitWidth="171.0" layoutX="1026.0" layoutY="623.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/user-screen/texture.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
                   <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
                      <columns>
@@ -146,7 +151,7 @@
             </Button>
          </children>
       </VBox>
-      <AnchorPane fx:id="anchorMenu" layoutX="195.0" layoutY="81.0" prefHeight="630.0" prefWidth="124.0" style="-fx-background-color: #353566; -fx-background-radius: 20; -fx-border-color: #ffffff; -fx-border-radius: 20;">
+      <AnchorPane fx:id="anchorMenu" layoutX="187.0" layoutY="74.0" prefHeight="651.0" prefWidth="124.0" style="-fx-background-color: #2E2E48; -fx-background-radius: 0; -fx-border-radius: 10;">
          <children>
             <Button layoutX="15.0" layoutY="44.0" mnemonicParsing="false" onAction="#adicionarBlanqueta" styleClass="buttonControle" text="Blanqueta" />
             <Label layoutX="26.0" layoutY="14.0" text="Adicionar" textFill="WHITE">
@@ -196,5 +201,25 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <ImageView layoutX="20.0" layoutY="235.0">
+         <image>
+            <Image url="@../../../images/produtos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="19.0" layoutY="291.0">
+         <image>
+            <Image url="@../../../images/blanquetas.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="17.0" layoutY="345.0">
+         <image>
+            <Image url="@../../../images/processos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="793.0" fitWidth="41.0" layoutX="1152.0" layoutY="771.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/user-screen/texture2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
