@@ -17,7 +17,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     private static Stage stage;
-    private static Scene loginScene,adminScene,paneBlanqueta,paneProcesso,paneProduto,paneUsuario,paneEmpresa;
+    private static Scene    loginScene,welcomescene,
+                            paneAdicionarBlanqueta,paneExcluirBlanqueta,paneAtualizarBlanqueta,
+                            paneAdicionarProcesso,paneExcluirProcesso,paneAtualizarProcesso,
+                            paneAdicionarProduto,paneExcluirProduto,paneAtualizarProduto,
+                            paneAdicionarUsuario,paneExcluirUsuario,paneAtualizarUsuario,
+                            paneAdicionarEmpresa,paneExcluirEmpresa,paneAtualizarEmpresa;
     public static Image icon;
 
 
@@ -37,23 +42,42 @@ public class HelloApplication extends Application {
 
         //(tela do administrador)
         Parent fxmladm =FXMLLoader.load(HelloApplication.class.getResource("screen-AdminWelcome.fxml"));
-        adminScene = new Scene(fxmladm);
+        welcomescene = new Scene(fxmladm);
 
-        //--------------------------* criando cache de panes de cadastro *----------------------------
-        Parent fxmlBlanqueta = FXMLLoader.load(HelloApplication.class.getResource("pane-Blanqueta.fxml"));
-        paneBlanqueta = new Scene(fxmlBlanqueta);
+        //--------------------------* criando cache dos paineis de manutenção *----------------------------
+        //blanqueta
+        Parent fxmlAdicionarBlanqueta = FXMLLoader.load(HelloApplication.class.getResource("pane-BlanquetaCadastrar.fxml"));
+        Parent fxmlexcluirBlanqueta = FXMLLoader.load(HelloApplication.class.getResource("pane-BlanquetaExcluir.fxml"));
+        Parent fxmlAtualizarBlanqueta = FXMLLoader.load(HelloApplication.class.getResource("pane-BlanquetaAtualizar.fxml"));
+        paneAdicionarBlanqueta = new Scene(fxmlAdicionarBlanqueta);
+        paneExcluirBlanqueta = new Scene(fxmlexcluirBlanqueta);
+        paneAtualizarBlanqueta =  new Scene(fxmlAtualizarBlanqueta);
 
-        Parent fxmlProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo.fxml"));
-        paneProcesso = new Scene(fxmlProcesso);
 
-        Parent fxmlProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
-        paneProduto = new Scene(fxmlProdudo);
+        //Processo
+        Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo.fxml"));
+        paneAdicionarProcesso = new Scene(fxmlAdicionarProcesso);
 
-        Parent fxmlUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
-        paneUsuario = new Scene(fxmlUsuario);
+        //Produto
+        Parent fxmlAdicionarProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
+        paneAdicionarProduto = new Scene(fxmlAdicionarProdudo);
 
-        Parent fxmlEmpresa = FXMLLoader.load(HelloApplication.class.getResource("pane-Empresa.fxml"));
-        paneEmpresa = new Scene(fxmlEmpresa);
+
+        //Usuario
+        Parent fxmlAdicionarUsuario = FXMLLoader.load(HelloApplication.class.getResource("screen-CadastroUsuario.fxml"));
+        Parent fxmlExcluirUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
+        Parent fxmlAtualizarUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
+        paneAdicionarUsuario = new Scene(fxmlAdicionarUsuario);
+        paneExcluirUsuario = new Scene(fxmlExcluirUsuario);
+        paneAtualizarUsuario = new Scene(fxmlAtualizarUsuario);
+
+
+        //Empresa
+        Parent fxmlAdicionarEmpresa = FXMLLoader.load(HelloApplication.class.getResource("pane-Empresa.fxml"));
+
+        paneAdicionarEmpresa = new Scene(fxmlAdicionarEmpresa);
+
+
 
         //configurações do stage
         icon = new Image("icon.png");
@@ -71,7 +95,7 @@ public class HelloApplication extends Application {
                 stage.setScene(loginScene);
                 }
             case 2-> {
-                stage.setScene(adminScene);
+                stage.setScene(welcomescene);
                 stage.setResizable(true);
                 stage.setMaximized(true);
                 }
@@ -80,31 +104,32 @@ public class HelloApplication extends Application {
     public static void panescontrol(int pane){
         Stage panes = new Stage();
         panes.getIcons().add(icon);
-        switch (pane) {
-            case 1 -> {
-                panes.setScene(paneBlanqueta);
-                panes.setTitle("gerenciar Blanquetas");
+
+        switch (pane)
+        {
+            case 1:
+            {
+                panes.setScene(paneAdicionarBlanqueta);
                 panes.show();
+                break;
             }
-            case 2 -> {
-                panes.setScene(paneProcesso);
-                panes.setTitle("gerenciar Processos");
+            case 2:
+            {
+                panes.setScene(paneExcluirBlanqueta);
                 panes.show();
+                break;
             }
-            case 3 -> {
-                panes.setScene(paneProduto);
-                panes.setTitle("gerenciar Produtos");
+            case 3:
+            {
+                panes.setScene(paneAtualizarBlanqueta);
                 panes.show();
+                break;
             }
-            case 4 -> {
-                panes.setScene(paneUsuario);
-                panes.setTitle("gerenciar Usuarios");
+            case 4:
+            {
+                panes.setScene(paneAdicionarEmpresa);
                 panes.show();
-            }
-            case 5 -> {
-                panes.setScene(paneEmpresa);
-                panes.setTitle("gerenciar Empresas");
-                panes.show();
+                break;
             }
         }
 

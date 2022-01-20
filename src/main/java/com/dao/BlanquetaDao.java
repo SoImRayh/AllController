@@ -25,7 +25,7 @@ public class BlanquetaDao implements IBlanquetaDao{
             ps.setInt(3,blanqueta.getRepeticoes());
             ps.setString(4,blanqueta.getMaquina().toString());
             ps.setString(5, blanqueta.getObs());
-            ps.execute();
+            ps.executeUpdate();
 
         }catch (SQLException ex){
             throw new RuntimeException(ex);
