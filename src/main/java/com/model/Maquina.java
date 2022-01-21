@@ -1,4 +1,4 @@
-package com.objects;
+package com.model;
 
 public enum Maquina {
     KBA,

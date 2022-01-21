@@ -1,6 +1,6 @@
 package com.dao;
 
-import com.objects.Empresa;
+import com.model.Empresa;
 
 import java.util.List;
 import java.util.Optional;

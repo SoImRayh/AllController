@@ -1,7 +1,7 @@
 package com.dao;
 
 import com.infra.ConnectionFactory;
-import com.objects.Produto;
+import com.model.Produto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,8 +1,8 @@
 package com.controllers;
 
 import com.dao.EmpresaDao;
-import com.objects.Empresa;
-import com.objects.Produto;
+import com.model.Empresa;
+import com.model.Produto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class ControllerPaneEmpresa implements Initializable {

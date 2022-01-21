@@ -1,4 +1,4 @@
-package com.objects;
+package com.model;
 
 public class Empresa {
     //atributos

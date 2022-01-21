@@ -14,7 +14,7 @@ module com.example.allcontroller {
     opens com.example.Main to javafx.fxml;
     exports com.example.Main;
     exports com.controllers;
-    exports com.objects;
+    exports com.model;
     opens com.controllers to javafx.fxml;
 
 }

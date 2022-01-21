@@ -1,4 +1,4 @@
-package com.user.allController;
+package com.model;
 
 public class User {
 

@@ -1,8 +1,8 @@
 package com.dao;
 
 import com.infra.ConnectionFactory;
-import com.objects.Blanqueta;
-import com.objects.Maquina;
+import com.model.Blanqueta;
+import com.model.Maquina;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

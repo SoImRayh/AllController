@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="PaneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="CadastroBlanquetaMaquina" layoutX="107.0" layoutY="198.0" prefHeight="43.0" prefWidth="211.0" promptText="Maquina" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
+      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Cadastrar" />
+      <Label alignment="CENTER" layoutX="69.0" layoutY="79.0" prefHeight="100.0" prefWidth="300.0" stylesheets="@../../../CSS/css.css" text="Cadastrar Blanqueta" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CadastroBlanquetaLocalizaçâo" layoutX="107.0" layoutY="256.0" prefHeight="43.0" prefWidth="211.0" promptText="Localização" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
+      <TextField fx:id="CadastroBlanquetaFaca" layoutX="107.0" layoutY="299.0" prefHeight="43.0" prefWidth="211.0" promptText="Faca" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
+      <TextField fx:id="CadastroBlanquetaObs" layoutX="107.0" layoutY="349.0" prefHeight="43.0" prefWidth="211.0" promptText="Obs" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
+      <TextField fx:id="CadastroBlanquetaID" layoutX="107.0" layoutY="392.0" prefHeight="43.0" prefWidth="211.0" promptText="Id" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
+      <Line endX="100.0" layoutX="212.0" layoutY="229.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="213.0" layoutY="287.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="212.0" layoutY="328.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="213.0" layoutY="426.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="100.0" layoutX="212.0" layoutY="378.0" startX="-100.0" stroke="WHITE" />
+      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="112.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="181.0" layoutX="243.0" layoutY="433.0">
+         <image>
+            <Image url="@../../../images/user-screen/icon-produto.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

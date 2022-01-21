@@ -1,7 +1,7 @@
 package com.dao;
 
-import com.objects.Blanqueta;
-import com.objects.Produto;
+import com.model.Blanqueta;
+import com.model.Produto;
 
 import java.util.List;
 import java.util.Optional;
