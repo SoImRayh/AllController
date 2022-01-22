@@ -40,7 +40,7 @@
          </cursor>
       </TextField>
       <Line endX="141.0" layoutX="218.0" layoutY="350.0" startX="-148.0" stroke="WHITE" />
-      <TextField fx:id="fieldCliente" focusTraversable="false" layoutX="70.0" layoutY="384.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Cliente" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" text="1">
+      <TextField fx:id="fieldCliente" focusTraversable="false" layoutX="70.0" layoutY="384.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="295.0" promptText="Cliente" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font>
@@ -48,7 +48,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Line endX="141.0" layoutX="221.0" layoutY="417.0" startX="-148.0" stroke="WHITE" />
+      <Line endX="141.0" layoutX="221.0" layoutY="417.0" startX="-150.99998474121094" stroke="WHITE" />
       <Label alignment="CENTER" layoutX="1.0" layoutY="147.0" prefHeight="39.0" prefWidth="424.0" text="Cadastro de Produtos" textFill="WHITE">
          <font>
             <Font size="27.0" />

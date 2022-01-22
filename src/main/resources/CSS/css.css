@@ -31,7 +31,6 @@
     -fx-text-alignment: center;
     -fx-pref-height: 40;
     -fx-pref-width: 190;
-    -fx-transition-duration: 500ms;
 }
 
 .buttonMenu:hover{
@@ -44,6 +43,8 @@
     -fx-background-color: #5B4DFF;
 
 }
+
+
 .buttonControle{
     -fx-background-color: #453CAB;
     -fx-background-radius: 5;
@@ -57,7 +58,6 @@
 .buttonControle:hover{
     -fx-background-radius: 0;
     -fx-opacity:0.85;
-
 }
 
 .buttonControle:pressed {
@@ -67,7 +67,8 @@
 
 .textfieldefalt{
     -fx-text-fill: #ffffff;
-    -fx-background-color: #353566;
+    -fx-background-color: rgba(0,0,0,0);
+
 }
 
 .cadButton{
@@ -76,4 +77,25 @@
     -fx-text-alignment: center;
     -fx-pref-height: 37;
     -fx-pref-width: 295;
+}
+
+.cadButton:hover{
+    -fx-background-radius: 0;
+    -fx-opacity:0.85;
+}
+
+.cadButton:pressed {
+    -fx-background-radius:0;
+    -fx-background-color: #483FBD;
+}
+
+.dateLabel {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-color: #453CAB;
+}
+
+.tableDesign{
+    -fx-background-color:#483FBD;
+    -fx-background-radius: 15px;
+
 }

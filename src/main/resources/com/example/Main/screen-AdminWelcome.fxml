@@ -9,11 +9,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1290.0" styleClass="screenbackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerAdminWelcome">
@@ -52,7 +54,12 @@
             </ImageView>
             <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
-                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
+                  <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>
                         <TableColumn fx:id="columnIdBlanqueta" prefWidth="75.0" text="ID" />
                         <TableColumn fx:id="columnLovalizacaoBlanqueta" prefWidth="104.0" text="localização" />
@@ -61,21 +68,30 @@
                         <TableColumn fx:id="columnReoeticoesBlanqueta" prefWidth="167.0" text="repetições" />
                         <TableColumn fx:id="columnObsBlanqueta" prefWidth="451.0" text="OBS" />
                      </columns>
+                     <effect>
+                        <DropShadow height="58.43" radius="18.189999999999998" width="16.33">
+                           <color>
+                              <Color opacity="0.284246563911438" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </TableView>
-                  <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="44.0" />
-                     </font>
-                  </Label>
                </children>
             </Pane>
-            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0" visible="false">
+            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0">
                <children>
-                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
+                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>
                         <TableColumn prefWidth="75.0" text="C1" />
                         <TableColumn prefWidth="75.0" text="C2" />
                      </columns>
+                     <effect>
+                        <DropShadow height="64.28" radius="30.762500000000003" spread="0.23" width="60.77">
+                           <color>
+                              <Color opacity="0.18150687217712402" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </TableView>
                   <Label layoutX="455.0" layoutY="20.0" text="Processos" textFill="WHITE">
                      <font>
@@ -86,26 +102,33 @@
             </Pane>
             <Pane fx:id="paneProdutos" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
-                  <TableView fx:id="tableProduto" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" style="-fx-background-color: #ffffff; -fx-opacity: 1;">
+                  <TableView fx:id="tableProduto" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>
                         <TableColumn fx:id="colCodgoProduto" prefWidth="251.0" text="Código" />
                         <TableColumn fx:id="colNomeProduto" minWidth="0.0" prefWidth="406.0" text="Nome" />
                         <TableColumn fx:id="colEmpresaProduto" minWidth="0.0" prefWidth="399.0" text="Empresa" />
                      </columns>
+                     <effect>
+                        <DropShadow height="81.83" radius="29.8875" spread="0.41" width="39.72">
+                           <color>
+                              <Color opacity="0.1815069019794464" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </TableView>
-                  <Label layoutX="658.0" layoutY="21.0" text="Produtos" textFill="WHITE">
+                  <Label layoutX="655.0" layoutY="38.0" prefHeight="29.0" prefWidth="189.0" text="Produtos" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
-                  <Button fx:id="buttonPesquisar" layoutX="496.0" layoutY="73.0" mnemonicParsing="false" onAction="#pesquisar" styleClass="buttonControle" text="Pesquisar" />
-                  <ChoiceBox fx:id="choiceBoxCatProduto" layoutX="157.0" layoutY="73.0" prefWidth="150.0" />
-                  <Label layoutX="16.0" layoutY="70.0" text="Pesquisar por:" textFill="WHITE">
+                  <Button fx:id="buttonPesquisar" layoutX="496.0" layoutY="62.0" mnemonicParsing="false" onAction="#pesquisar" styleClass="buttonControle" text="Pesquisar" />
+                  <ChoiceBox fx:id="choiceBoxCatProduto" layoutX="157.0" layoutY="64.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
+                  <Label layoutX="16.0" layoutY="61.0" text="Pesquisar por:" textFill="WHITE">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="fieldProcurarProduto" layoutX="327.0" layoutY="73.0" />
+                  <TextField fx:id="fieldProcurarProduto" layoutX="327.0" layoutY="64.0" promptText="Produto" style="-fx-border-color: white;" styleClass="textfieldefalt" />
                </children>
             </Pane>
          </children></Pane>
@@ -126,54 +149,54 @@
                   <Label fx:id="userTypeLabelLogo" layoutX="56.0" layoutY="118.0" styleClass="defalt-labels" stylesheets="@../../../CSS/css.css" text="Adminisitrador" />
                </children>
             </Pane>
-            <Button contentDisplay="CENTER" defaultButton="true" ellipsisString="produtos" mnemonicParsing="false" onAction="#produtosTable" opacity="0.92" prefHeight="40.0" prefWidth="190.0" styleClass="buttonMenu" stylesheets="@../../../CSS/css.css" text="Produtos" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+            <Button fx:id="produtosButton" contentDisplay="CENTER" ellipsisString="produtos" mnemonicParsing="false" onAction="#produtosTable" prefHeight="40.0" prefWidth="190.0" styleClass="buttonMenu" text="Produtos" textFill="WHITE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Button>
             <Separator prefHeight="15.0" prefWidth="191.0" visible="false" />
-            <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#blanquetasTable" prefHeight="68.0" prefWidth="191.0" styleClass="buttonMenu" text="Blanquetas" textFill="WHITE">
+            <Button fx:id="blanquetasButton" layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#blanquetasTable" prefHeight="68.0" prefWidth="191.0" styleClass="buttonMenu" text="   Blanquetas" textFill="WHITE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Button>
             <Separator prefHeight="15.0" prefWidth="200.0" visible="false" />
-            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#processosTable" prefHeight="85.0" prefWidth="191.0" styleClass="buttonMenu" text="Processos" textFill="WHITE">
+            <Button fx:id="processosButton" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#processosTable" prefHeight="85.0" prefWidth="191.0" styleClass="buttonMenu" text="Processos" textFill="WHITE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Button>
             <Separator prefHeight="65.0" prefWidth="190.0" visible="false" />
-            <Button mnemonicParsing="false" onAction="#abrirManutencao" styleClass="buttonMenu" text="Manutenção" textFill="WHITE">
+            <Button fx:id="manutencaoButton" mnemonicParsing="false" onAction="#abrirManutencao" styleClass="buttonMenu" text="    Manutenção" textFill="WHITE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <AnchorPane fx:id="anchorMenu" layoutX="187.0" layoutY="74.0" prefHeight="651.0" prefWidth="124.0" style="-fx-background-color: #2E2E48; -fx-background-radius: 0; -fx-border-radius: 10;">
+      <AnchorPane fx:id="anchorMenu" layoutX="187.0" layoutY="74.0" prefHeight="651.0" prefWidth="124.0" style="-fx-background-color: #2E2E48; -fx-border-radius: 10;" visible="false">
          <children>
             <Button layoutX="15.0" layoutY="44.0" mnemonicParsing="false" onAction="#adicionarBlanqueta" styleClass="buttonControle" text="Blanqueta" />
-            <Label layoutX="26.0" layoutY="14.0" text="Adicionar" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="11.0" text="Adicionar" textFill="WHITE">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             <Button layoutX="15.0" layoutY="79.0" mnemonicParsing="false" onAction="#adicionarProduto" styleClass="buttonControle" text="Produto" />
             <Button layoutX="15.0" layoutY="114.0" mnemonicParsing="false" onAction="#adicionarEmpresa" styleClass="buttonControle" text="Empresa" />
             <Button layoutX="15.0" layoutY="148.0" mnemonicParsing="false" onAction="#adicionarProcesso" styleClass="buttonControle" text="Processo" />
             <Button layoutX="15.0" layoutY="180.0" mnemonicParsing="false" onAction="#adicionarUsuario" styleClass="buttonControle" text="Usuário" />
-            <Label layoutX="39.0" layoutY="239.0" text="Editar" textFill="WHITE">
+            <Label layoutX="39.0" layoutY="229.0" text="Editar" textFill="WHITE">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             <Button layoutX="15.0" layoutY="265.0" mnemonicParsing="false" onAction="#editarBlanqueta" styleClass="buttonControle" text="Blanqueta" />
             <Button layoutX="15.0" layoutY="300.0" mnemonicParsing="false" onAction="#editarProduto" styleClass="buttonControle" text="Produto" />
             <Button layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onAction="#editarEmpresa" styleClass="buttonControle" text="Empresa" />
-            <Label layoutX="26.0" layoutY="411.0" text="Remover" textFill="WHITE">
+            <Label layoutX="25.0" layoutY="402.0" text="Remover" textFill="WHITE">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             <Button layoutX="15.0" layoutY="435.0" mnemonicParsing="false" onAction="#removerBlanqueta" styleClass="buttonControle" text="Blanqueta" />
@@ -214,6 +237,11 @@
       <ImageView layoutX="17.0" layoutY="345.0">
          <image>
             <Image url="@../../../images/processos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="21.0" layoutX="21.0" layoutY="452.0" opacity="0.72">
+         <image>
+            <Image url="@../../../images/manutencao.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="793.0" fitWidth="41.0" layoutX="1152.0" layoutY="771.0" pickOnBounds="true" preserveRatio="true">

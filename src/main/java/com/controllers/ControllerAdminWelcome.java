@@ -1,12 +1,15 @@
 
 package com.controllers;
 
+
 import com.dao.BlanquetaDao;
 import com.dao.ProdutoDao;
 import com.example.Main.HelloApplication;
 import com.model.Blanqueta;
 import com.model.Maquina;
 import com.model.Produto;
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +22,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.transform.Translate;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -73,6 +78,18 @@ public class ControllerAdminWelcome implements Initializable {
     private Button buttonMain;
 
     @FXML
+    private Button blanquetasButton;
+
+    @FXML
+    private Button manutecaoButton;
+
+    @FXML
+    private Button processosButton;
+
+    @FXML
+    private Button produtosButton;
+
+    @FXML
     private Pane paneBlanquetas;
 
     @FXML
@@ -95,9 +112,12 @@ public class ControllerAdminWelcome implements Initializable {
     @FXML
     protected void blanquetasTable(ActionEvent event) {
         esconderlabels();
+
+
         paneProcessos.setVisible(false);
         paneProdutos.setVisible(false);
         paneBlanquetas.setVisible(true);
+
 
         BlanquetaDao dao = new BlanquetaDao();
         List<Blanqueta> lista;
@@ -107,6 +127,9 @@ public class ControllerAdminWelcome implements Initializable {
 
         tableBlanqueta.setItems(observableList);
 
+
+
+
     }
 
     @FXML
@@ -115,6 +138,7 @@ public class ControllerAdminWelcome implements Initializable {
         paneBlanquetas.setVisible(false);
         paneProdutos.setVisible(false);
         paneProcessos.setVisible(true);
+
     }
 
     @FXML
@@ -123,6 +147,7 @@ public class ControllerAdminWelcome implements Initializable {
         paneProcessos.setVisible(false);
         paneBlanquetas.setVisible(false);
         paneProdutos.setVisible(true);
+
     }
 
     @FXML
@@ -168,11 +193,39 @@ public class ControllerAdminWelcome implements Initializable {
     }
     @FXML
     void abrirManutencao(ActionEvent event) {
+
         if(anchorMenu.isVisible() == true)
         {
+
+            // Transicao de Opacidade
+            FadeTransition ft = new FadeTransition(Duration.seconds(0.3),anchorMenu);
+            ft.setFromValue(0.0);
+            ft.setToValue(1.0);
+            ft.play();
+
+            // Transicao de Translacao
+            TranslateTransition closeSlide = new TranslateTransition(Duration.seconds(0.2), anchorMenu);
+
+            closeSlide.setToX(-100);
+            closeSlide.setNode(anchorMenu);
+            closeSlide.play();
+
             anchorMenu.setVisible(false);
+
         }else
         {
+            // Transicao de Opacidade
+            FadeTransition ft = new FadeTransition(Duration.seconds(0.3),anchorMenu);
+            ft.setFromValue(0.0);
+            ft.setToValue(1.0);
+            ft.play();
+
+            // Transicao de Translacao
+            TranslateTransition openSlide = new TranslateTransition(Duration.seconds(0.2),anchorMenu);
+            openSlide.setToX(0);
+            openSlide.setNode(anchorMenu);
+            openSlide.play();
+
             anchorMenu.setVisible(true);
         }
     }
