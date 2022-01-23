@@ -16,29 +16,29 @@
             <Image url="@../../../images/blanquetasBig.png" />
          </image>
       </ImageView>
-      <Button fx:id="ButtonBlanquetaExcluir" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Excluir" />
+      <Button fx:id="buttonBlanquetaExcluir" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Excluir" />
       <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="112.0" layoutY="28.0">
          <image>
             <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
-      <TextField fx:id="BlanquetaExcluirFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaExcluirFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaMaquinaExcluir" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaMaquinaExcluir" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaExcluirLocalização" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaExcluirLocalização" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaExcluirObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaExcluirObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaExcluirId" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaExcluirId" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>

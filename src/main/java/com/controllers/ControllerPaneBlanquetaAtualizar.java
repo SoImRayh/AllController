@@ -4,21 +4,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 public class ControllerPaneBlanquetaAtualizar {
 
-    @FXML
-    private TextField BlanquetaAtualizarFaca;
 
     @FXML
-    private TextField BlanquetaAtualizarId;
+    private TextField blanquetaAtualizarFaca;
 
     @FXML
-    private TextField BlanquetaAtualizarLocalização;
+    private TextField blanquetaAtualizarId;
 
     @FXML
-    private TextField BlanquetaAtualizarMaquina;
+    private TextField blanquetaAtualizarLocalização;
 
     @FXML
-    private TextField BlanquetaAtualizarObs;
+    private TextField blanquetaAtualizarMaquina;
 
     @FXML
-    private Button ButtonBlanquetaAtualizar;
+    private TextField blanquetaAtualizarObs;
+
+    @FXML
+    private Button buttonBlanquetaAtualizar;
 }
