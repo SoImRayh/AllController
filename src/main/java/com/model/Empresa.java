@@ -29,4 +29,13 @@ public class Empresa {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public int autenticarDados()
+    {
+        if(this.nome.isBlank())
+        {
+            return 1;// campo de nome nao preemchido corretamente
+        }
+        return 0;
+    }
 }

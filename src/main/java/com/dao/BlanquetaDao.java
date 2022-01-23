@@ -62,7 +62,7 @@ public class BlanquetaDao implements IBlanquetaDao{
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()){
-                b = new Blanqueta(rs.getString("localizacao"),rs.getString("maquina"), rs.getString("faca"), rs.getInt("repeticoes") );
+                b = new Blanqueta(rs.getString("localizacao"),Maquina.valueOf(rs.getString("maquina")), rs.getString("faca"),rs.getString("obs"), rs.getInt("repeticoes") );
                 li.add(b);
             }
         }catch (SQLException sqlException){
