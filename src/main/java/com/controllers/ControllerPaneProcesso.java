@@ -42,7 +42,7 @@ public class ControllerPaneProcesso {
         processo.setBlanqueta(bdao.acharPorPosicao(fieldBlanqueta.getText().toUpperCase(Locale.ROOT)));
         processo.setProduto(pdao.pesquisarPorCodigo(fieldCodigo.getText().toUpperCase(Locale.ROOT)));
         processo.setData(datapicker.getValue());
-        dao.salvar(processo);
+        dao.salvar(processo);//
 
     }
 
