@@ -49,8 +49,14 @@ public class HelloApplication extends Application {
 
 
         //Processo
-        Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo.fxml"));
+        Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo-Cadastrar.fxml"));
         paneAdicionarProcesso = new Scene(fxmlAdicionarProcesso);
+
+        Parent fxmlAtualizarProduto = FXMLLoader.load(HelloApplication.class.getResource("Pane-Produto-Atualizar.fxml"));
+        paneAtualizarProduto = new Scene(fxmlAtualizarProduto);
+
+        Parent fxmlExcluirProduto = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto-Excluir.fxml"));
+        paneExcluirProduto = new Scene(fxmlExcluirProduto);
 
         //Produto
         Parent fxmlAdicionarProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
@@ -122,6 +128,42 @@ public class HelloApplication extends Application {
             case 4:
             {
                 panes.setScene(paneAdicionarEmpresa);
+                panes.show();
+                break;
+            }
+            case 5:
+            {
+                panes.setScene(paneAdicionarProduto);
+                panes.show();
+                break;
+            }
+            case 6:
+            {
+                panes.setScene(paneExcluirProduto);
+                panes.show();
+                break;
+            }
+            case 7:
+            {
+                panes.setScene(pane);
+                panes.show();
+                break;
+            }
+            case 8:
+            {
+                panes.setScene(pane);
+                panes.show();
+                break;
+            }
+            case 9:
+            {
+                panes.setScene(pane);
+                panes.show();
+                break;
+            }
+            case 10:
+            {
+                panes.setScene(pane);
                 panes.show();
                 break;
             }
