@@ -11,18 +11,18 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PaneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerPaneBlanquetaCadastrar.java">
    <children>
       <ImageView fitHeight="303.0" fitWidth="295.0" layoutX="129.0" layoutY="328.0">
          <image>
             <Image url="@../../../images/blanquetasBig.png" />
          </image>
       </ImageView>
-      <TextField fx:id="CadastroBlanquetaMaquina" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="cadastroBlanquetaMaquina" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Cadastrar">
+      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" onAction="#cadastrar" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Cadastrar">
          <effect>
             <DropShadow>
                <color>
@@ -35,19 +35,19 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="CadastroBlanquetaLocalizaçâo" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="cadastroBlanquetaLocalizaçâo" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="CadastroBlanquetaFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="cadastroBlanquetaFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="CadastroBlanquetaObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="cadastroBlanquetaObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="CadastroBlanquetaID" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="cadastroBlanquetaID" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt">
          <font>
             <Font size="15.0" />
          </font></TextField>

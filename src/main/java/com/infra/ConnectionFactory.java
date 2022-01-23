@@ -9,7 +9,7 @@ public class ConnectionFactory {
 
     public static Connection getconection(){
         try{
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/AllController","postgres","123");
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/AllController","postgres","40028922");
         }catch (SQLException exception){
             throw new RuntimeException(exception);
         }

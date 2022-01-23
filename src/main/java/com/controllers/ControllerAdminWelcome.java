@@ -13,20 +13,20 @@ import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.transform.Translate;
 import javafx.util.Duration;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -243,17 +243,17 @@ public class ControllerAdminWelcome implements Initializable {
 
     @FXML
     void adicionarProcesso(ActionEvent event) {
-
+        HelloApplication.panescontrol(8);
     }
 
     @FXML
     void adicionarProduto(ActionEvent event) {
-
+        HelloApplication.panescontrol(5);
     }
 
     @FXML
     void adicionarUsuario(ActionEvent event) {
-
+        HelloApplication.panescontrol(9);
     }
     @FXML
     void editarBlanqueta(ActionEvent event) {
@@ -267,7 +267,7 @@ public class ControllerAdminWelcome implements Initializable {
 
     @FXML
     void editarProduto(ActionEvent event) {
-
+        HelloApplication.panescontrol(7);
     }
     @FXML
     void removerBlanqueta(ActionEvent event) {
@@ -286,7 +286,7 @@ public class ControllerAdminWelcome implements Initializable {
 
     @FXML
     void removerProduto(ActionEvent event) {
-
+        HelloApplication.panescontrol(6);
     }
 
     @FXML

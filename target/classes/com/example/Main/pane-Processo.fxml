@@ -50,7 +50,7 @@
       </TextField>
       <Line endX="121.0" layoutX="198.0" layoutY="296.0" startX="-100.0" stroke="WHITE" />
       <DatePicker fx:id="datapicker" layoutX="83.0" layoutY="365.0" prefHeight="26.0" prefWidth="250.0" promptText="Data" styleClass="dateLabel" />
-      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" onAction="#cadastrar" styleClass="cadButton" text="Cadastrar">
+      <Button fx:id="buttonCadastroProcesso" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" onAction="#cadastrar" styleClass="cadButton" text="Cadastrar">
          <effect>
             <DropShadow>
                <color>

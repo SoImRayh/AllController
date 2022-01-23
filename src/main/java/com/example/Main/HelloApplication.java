@@ -49,8 +49,13 @@ public class HelloApplication extends Application {
 
 
         //Processo
-        Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo-Cadastrar.fxml"));
+        Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo.fxml"));
         paneAdicionarProcesso = new Scene(fxmlAdicionarProcesso);
+
+
+        //Produto
+        Parent fxmlAdicionarProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
+        paneAdicionarProduto = new Scene(fxmlAdicionarProdudo);
 
         Parent fxmlAtualizarProduto = FXMLLoader.load(HelloApplication.class.getResource("Pane-Produto-Atualizar.fxml"));
         paneAtualizarProduto = new Scene(fxmlAtualizarProduto);
@@ -58,14 +63,10 @@ public class HelloApplication extends Application {
         Parent fxmlExcluirProduto = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto-Excluir.fxml"));
         paneExcluirProduto = new Scene(fxmlExcluirProduto);
 
-        //Produto
-        Parent fxmlAdicionarProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
-        paneAdicionarProduto = new Scene(fxmlAdicionarProdudo);
-
 
 
         //Usuario
-        Parent fxmlAdicionarUsuario = FXMLLoader.load(HelloApplication.class.getResource("screen-CadastroUsuario.fxml"));
+        Parent fxmlAdicionarUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
         Parent fxmlExcluirUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
         Parent fxmlAtualizarUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
         paneAdicionarUsuario = new Scene(fxmlAdicionarUsuario);
@@ -162,6 +163,7 @@ public class HelloApplication extends Application {
                 panes.show();
                 break;
             }
+
         }
 
     }

@@ -58,12 +58,12 @@
          </cursor>
       </TextField>
       <Line endX="141.0" layoutX="216.0" layoutY="276.0" startX="-148.0" stroke="WHITE" />
-      <CheckBox fx:id="checkBoxAdmin" layoutX="73.0" layoutY="422.0" mnemonicParsing="false" text="Administrador" textFill="WHITE">
+      <CheckBox fx:id="checkBoxAdmin" layoutX="74.0" layoutY="464.0" mnemonicParsing="false" text="Administrador" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </CheckBox>
-      <PasswordField fx:id="fieldConfirmarSenha" layoutX="74.0" layoutY="364.0" prefHeight="25.0" prefWidth="290.0" promptText="Confirmar Senha" styleClass="textfieldefalt">
+      <PasswordField fx:id="fieldConfirmarSenha" layoutX="73.0" layoutY="413.0" prefHeight="25.0" prefWidth="290.0" promptText="Confirmar Senha" styleClass="textfieldefalt">
          <font>
             <Font size="15.0" />
          </font>
