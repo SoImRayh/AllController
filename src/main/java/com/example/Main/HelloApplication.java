@@ -63,6 +63,7 @@ public class HelloApplication extends Application {
         paneAdicionarProduto = new Scene(fxmlAdicionarProdudo);
 
 
+
         //Usuario
         Parent fxmlAdicionarUsuario = FXMLLoader.load(HelloApplication.class.getResource("screen-CadastroUsuario.fxml"));
         Parent fxmlExcluirUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
@@ -145,19 +146,19 @@ public class HelloApplication extends Application {
             }
             case 7:
             {
-                panes.setScene(pane);
+                panes.setScene(paneAtualizarProduto);
                 panes.show();
                 break;
             }
             case 8:
             {
-                panes.setScene(pane);
+                panes.setScene(paneAdicionarProcesso);
                 panes.show();
                 break;
             }
             case 9:
             {
-                panes.setScene(pane);
+                panes.setScene(paneAdicionarUsuario);
                 panes.show();
                 break;
             }
