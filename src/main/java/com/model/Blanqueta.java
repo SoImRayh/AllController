@@ -1,23 +1,34 @@
 package com.model;
 
 public class Blanqueta {
-    private Maquina maquina;//
     private String localizacao;//
+    private Maquina maquina;//
     private String faca;//
     private String obs;//
-    private Integer id = null;//
     private Integer repeticoes;
+    private Integer id;//
+
 
     public Blanqueta(){
 
     }
 
-    public Blanqueta(String posicao,String maquina, String fac, int exposicoes) {
-        String position = posicao; // position ex: A1, E3
-        String machine =maquina;    //CD / KBA / XL
-        int faca = 4560;       // ex: faca 172, 173
-        int expositions = 6;    //number of expositions 3,4,6++
+    public Blanqueta(String posicao,Maquina maquina, String fac,String obs, int repeticoes) {
+        this.localizacao = posicao;
+        this.maquina = maquina;
+        this.faca = fac;
+        this.obs = obs;
+        this.repeticoes = repeticoes;
+        this.id = null;
+    }
 
+    public Blanqueta(String posicao,Maquina maquina, String fac,String obs, int repeticoes, int id) {
+        this.localizacao = posicao;
+        this.maquina = maquina;
+        this.faca = fac;
+        this.obs = obs;
+        this.repeticoes = repeticoes;
+        this.id = id;
     }
 
     // getters and setters
@@ -70,6 +81,28 @@ public class Blanqueta {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+
+    /**
+     * Caso algum dos campos obrigatorios no banco de dados nao seja atendido
+     * irá retornar seu respectivo caso;
+    */
+    public int validarDados(){
+        if(this.getLocalizacao().isBlank())
+        {
+            return 1; //campo de localização em branco.
+        }else if(this.maquina.toString().isBlank())
+        {
+            return 2; //nao foi inserido nenhum maquina
+        }else if(this.faca.toString().isBlank())
+        {
+            return 3; // campo de faca nao preeenchido
+        }else if(this.repeticoes.toString().isBlank())
+        {
+            return 4; //campo de repeticoes nao preenchido
+        }
+        return 0; // todos os campos estão OK.
     }
 
     @Override

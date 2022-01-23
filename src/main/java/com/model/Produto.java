@@ -48,4 +48,19 @@ public class Produto {
     public String getName() {
         return name;
     }
+
+    public int autenticarDados(){
+        if(this.code.isBlank())
+        {
+            return 1;//campo de código nao preenchido
+        }else if (this.name.isBlank())
+        {
+            return 2;//campo de nome nao preenchido
+        }else if(this.empresa.toString().isBlank())
+        {
+            return 2;//campo de empresa nao preenchido corretamente
+        }
+
+        return 0;
+    }
 }

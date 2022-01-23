@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     private static Stage stage;
     private static Scene    loginScene,welcomescene,
                             paneAdicionarBlanqueta,paneExcluirBlanqueta,paneAtualizarBlanqueta,
-                            paneAdicionarProcesso,paneExcluirProcesso,paneAtualizarProcesso,
+                            paneAdicionarProcesso,
                             paneAdicionarProduto,paneExcluirProduto,paneAtualizarProduto,
                             paneAdicionarUsuario,paneExcluirUsuario,paneAtualizarUsuario,
                             paneAdicionarEmpresa,paneExcluirEmpresa,paneAtualizarEmpresa;

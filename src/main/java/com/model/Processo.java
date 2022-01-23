@@ -37,4 +37,13 @@ public class Processo {
     public void setBlanqueta(Blanqueta blanqueta) {
         this.blanqueta = blanqueta;
     }
+
+    public int autenticarDados()
+    {
+        if (this.data.toString().isBlank())
+        {
+            return 1; //campo de data nao preenchido
+        }
+        return 0;
+    }
 }
