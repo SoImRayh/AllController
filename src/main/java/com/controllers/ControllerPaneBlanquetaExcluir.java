@@ -5,21 +5,21 @@ import javafx.scene.control.TextField;
 
 public class ControllerPaneBlanquetaExcluir {
     @FXML
-    private TextField BlanquetaExcluirFaca;
+    private TextField blanquetaExcluirFaca;
 
     @FXML
-    private TextField BlanquetaExcluirId;
+    private TextField blanquetaExcluirId;
 
     @FXML
-    private TextField BlanquetaExcluirLocalização;
+    private TextField blanquetaExcluirLocalização;
 
     @FXML
-    private TextField BlanquetaExcluirObs;
+    private TextField blanquetaExcluirObs;
 
     @FXML
-    private TextField BlanquetaMaquinaExcluir;
+    private TextField blanquetaMaquinaExcluir;
 
     @FXML
-    private Button ButtonBlanquetaExcluir;
+    private Button buttonBlanquetaExcluir;
 
 }

@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.util.Locale;
 import java.util.Optional;
 
 public class ControllerPaneProduto {
@@ -75,13 +76,12 @@ public class ControllerPaneProduto {
 
     @FXML
     void cadastrar(){
+        Produto produto = new Produto();
         ProdutoDao dao = new ProdutoDao();
-        if (fieldNome.getText() != "" && fieldCodigo.getText() != "" && fieldCliente.getText() !=""){
-            Produto p = new Produto(fieldNome.getText(), Integer.parseInt(fieldCliente.getText()), fieldCodigo.getText());
-            dao.salvar(p);
-        }else{
-            System.out.println("preecha todos os campos corretamente");
-        }
+        produto.setName(fieldNome.getText().toUpperCase(Locale.ROOT));
+        produto.setCode(fieldCodigo.getText().toUpperCase(Locale.ROOT));
+        produto.setEmpresa(Integer.parseInt(fieldCliente.getText()));
+        dao.salvar(produto);
     }
 
     @FXML

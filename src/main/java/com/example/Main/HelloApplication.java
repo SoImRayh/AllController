@@ -162,12 +162,6 @@ public class HelloApplication extends Application {
                 panes.show();
                 break;
             }
-            case 10:
-            {
-                panes.setScene(pane);
-                panes.show();
-                break;
-            }
         }
 
     }

@@ -28,27 +28,27 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="BlanquetaAtualizarMaquina" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaAtualizarMaquina" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaAtualizarFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaAtualizarFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaAtualizarLocalização" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaAtualizarLocalização" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaAtualizarObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaAtualizarObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TextField fx:id="BlanquetaAtualizarId" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+      <TextField fx:id="blanquetaAtualizarId" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <Button fx:id="ButtonBlanquetaAtualizar" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Atualizar">
+      <Button fx:id="buttonBlanquetaAtualizar" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Atualizar">
          <effect>
             <DropShadow>
                <color>
