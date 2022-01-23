@@ -73,7 +73,27 @@ public class BlanquetaDao implements IBlanquetaDao{
 
     @Override
     public Optional<Blanqueta> acharPorPosicao(String posicao) {
-        return Optional.empty();
+        String sql = "select * from blanqueta where localizacao = ?";
+        Blanqueta blanqueta = new Blanqueta();
+        try(Connection connection = ConnectionFactory.getconection()) {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, "'" + posicao + "'");
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                blanqueta.setRepeticoes(rs.getInt("repeticoes"));
+                blanqueta.setLocalizacao(rs.getString("localizacao"));
+                blanqueta.setFaca(rs.getString("faca"));
+                blanqueta.setMaquina(Maquina.valueOf(rs.getString("maquina")));
+                blanqueta.setObs(rs.getString("obs"));
+                blanqueta.setId(rs.getInt("id"));
+            }
+
+        }catch (SQLException sqlException)
+        {
+            throw new RuntimeException(sqlException);
+        }
+        return Optional.ofNullable(blanqueta);
     }
 
     @Override

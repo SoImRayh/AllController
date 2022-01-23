@@ -1,20 +1,32 @@
 package com.model;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Processo {
     //atributos
-    private Date data;//
+    private LocalDate data;//
     private Produto produto;//
     private Blanqueta blanqueta;//
 
-    public Processo(Date data,Produto produto,Blanqueta blanqueta ){
+    public Processo(){}
+
+    public Processo(LocalDate data, Produto produto, Blanqueta blanqueta ){
         this.blanqueta = blanqueta;
         this.data = data;
         this.produto = produto;
     }
 
-    public Date getData() {
+    @Override
+    public String toString() {
+        return "Processo{" +
+                "data=" + data +
+                ", produto=" + produto +
+                ", blanqueta=" + blanqueta +
+                '}';
+    }
+
+    public LocalDate getData() {
         return data;
     }
 
@@ -26,7 +38,7 @@ public class Processo {
         return blanqueta;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 

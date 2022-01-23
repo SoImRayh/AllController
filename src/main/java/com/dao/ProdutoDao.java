@@ -113,19 +113,17 @@ public class ProdutoDao implements IProdutoDao{
     public Optional<Produto> pesquisarPorCodigo(String s) {
         String sql = "select * from produto where codigo  = ?";
 
-        Produto p = null;
+        Produto p = new Produto();
         try(Connection connection = ConnectionFactory.getconection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,"codigo");
+            preparedStatement.setString(1,"'"+"codigo"+"'");
 
             ResultSet rs = preparedStatement.executeQuery();
 
-            while(rs.next()){
-                String nome = rs.getString("nome");
-                Integer empresa =  rs.getInt("empresa");
-                String codigo = rs.getString("codigo");
-
-                p = new Produto(nome,empresa,codigo);
+            if(rs.next()){
+                p.setName(rs.getString("nome"));
+                p.setEmpresa(rs.getInt("empresa"));
+                p.setCode(rs.getString("codigo"));
 
             }
         }catch (SQLException exception){
