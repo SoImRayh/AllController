@@ -3,40 +3,64 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="PaneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="CadastroBlanquetaMaquina" layoutX="107.0" layoutY="198.0" prefHeight="43.0" prefWidth="211.0" promptText="Maquina" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
-      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Cadastrar" />
-      <Label alignment="CENTER" layoutX="69.0" layoutY="79.0" prefHeight="100.0" prefWidth="300.0" stylesheets="@../../../CSS/css.css" text="Cadastrar Blanqueta" textFill="WHITE">
+      <ImageView fitHeight="303.0" fitWidth="295.0" layoutX="129.0" layoutY="328.0">
+         <image>
+            <Image url="@../../../images/blanquetasBig.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="CadastroBlanquetaMaquina" layoutX="98.0" layoutY="219.0" prefHeight="31.0" prefWidth="222.0" promptText="Maquina:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="65.0" layoutY="519.0" mnemonicParsing="false" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Cadastrar">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.10000000149011612" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Label alignment="CENTER" layoutX="94.0" layoutY="139.0" prefHeight="35.0" prefWidth="227.0" stylesheets="@../../../CSS/css.css" text="Cadastrar Blanqueta" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="CadastroBlanquetaLocalizaçâo" layoutX="107.0" layoutY="256.0" prefHeight="43.0" prefWidth="211.0" promptText="Localização" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
-      <TextField fx:id="CadastroBlanquetaFaca" layoutX="107.0" layoutY="299.0" prefHeight="43.0" prefWidth="211.0" promptText="Faca" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
-      <TextField fx:id="CadastroBlanquetaObs" layoutX="107.0" layoutY="349.0" prefHeight="43.0" prefWidth="211.0" promptText="Obs" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
-      <TextField fx:id="CadastroBlanquetaID" layoutX="107.0" layoutY="392.0" prefHeight="43.0" prefWidth="211.0" promptText="Id" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css" />
-      <Line endX="100.0" layoutX="212.0" layoutY="229.0" startX="-100.0" stroke="WHITE" />
-      <Line endX="100.0" layoutX="213.0" layoutY="287.0" startX="-100.0" stroke="WHITE" />
-      <Line endX="100.0" layoutX="212.0" layoutY="328.0" startX="-100.0" stroke="WHITE" />
-      <Line endX="100.0" layoutX="213.0" layoutY="426.0" startX="-100.0" stroke="WHITE" />
-      <Line endX="100.0" layoutX="212.0" layoutY="378.0" startX="-100.0" stroke="WHITE" />
-      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="112.0" layoutY="14.0">
+      <TextField fx:id="CadastroBlanquetaLocalizaçâo" layoutX="98.0" layoutY="253.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="CadastroBlanquetaFaca" layoutX="98.0" layoutY="310.0" prefHeight="31.0" prefWidth="224.0" promptText="Faca:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="CadastroBlanquetaObs" layoutX="98.0" layoutY="356.0" prefHeight="31.0" prefWidth="222.0" promptText="Obs:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="CadastroBlanquetaID" layoutX="98.0" layoutY="391.0" prefHeight="50.0" prefWidth="224.0" promptText="Id:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Line endX="121.0" layoutX="198.0" layoutY="248.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="296.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="341.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="432.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="387.0" startX="-100.0" stroke="WHITE" />
+      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="112.0" layoutY="33.0">
          <image>
             <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="200.0" fitWidth="181.0" layoutX="243.0" layoutY="433.0">
-         <image>
-            <Image url="@../../../images/user-screen/icon-produto.png" />
-         </image>
-      </ImageView>
+      <Line endX="154.0" layoutX="181.0" layoutY="175.0" startX="-100.0" stroke="WHITE" />
    </children>
 </AnchorPane>
