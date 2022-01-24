@@ -1,21 +1,26 @@
 package com.dao;
 
 import com.infra.ConnectionFactory;
+import com.model.Blanqueta;
 import com.model.Processo;
+import com.model.Produto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class ProcessoDao implements IProcessoDao {
     @Override
     public Processo salvar(Processo processo) {
-        String sql = "Insert into processo (Fk_blanqueta_id, Fk_produto_id, data) values (?, ?, ?) ";
+        String sql = "Insert into processo (Fk_blanqueta_localizacao, Fk_produto_codigo, data) values (?, ?, ?) ";
         try(Connection connection = ConnectionFactory.getconection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,Integer.parseInt(processo.getBlanqueta().getLocalizacao()));
+            preparedStatement.setString(1,processo.getBlanqueta().getLocalizacao());
             preparedStatement.setString(2,processo.getProduto().getCode());
             preparedStatement.setDate(3,java.sql.Date.valueOf(processo.getData().toString()));
 
@@ -44,6 +49,37 @@ public class ProcessoDao implements IProcessoDao {
 
     @Override
     public List<Processo> todos() {
-        return null;
+        BlanquetaDao blanquetaDao = new BlanquetaDao();
+        ProdutoDao produtoDao = new ProdutoDao();
+
+        List<Processo> lista= new ArrayList<>();
+        Processo processo = new Processo() ;
+
+        String sql = "select * from processo";
+
+        try(Connection connection = ConnectionFactory.getconection())
+        {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next())
+            {
+                Blanqueta blanqueta = blanquetaDao.acharPorPosicao(rs.getString("fk_blanqueta_localizacao")).orElseThrow();
+                Produto produto = produtoDao.pesquisarPorCodigo(rs.getString("fk_produto_codigo")).orElseThrow();
+                LocalDate data = rs.getDate("data").toLocalDate();
+
+
+                processo.setProduto(produto);
+                processo.setBlanqueta(blanqueta);
+                processo.setData(data);
+
+                lista.add(processo);
+            }
+        }
+        catch (SQLException sqlException)
+        {
+            throw new RuntimeException(sqlException);
+        }
+        return lista;
     }
 }

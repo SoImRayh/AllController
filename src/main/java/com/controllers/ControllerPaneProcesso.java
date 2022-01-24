@@ -3,6 +3,7 @@ package com.controllers;
 import com.dao.BlanquetaDao;
 import com.dao.ProcessoDao;
 import com.dao.ProdutoDao;
+import com.model.Blanqueta;
 import com.model.Processo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,8 +34,12 @@ public class ControllerPaneProcesso {
         BlanquetaDao blanquetaDao = new BlanquetaDao();
         ProdutoDao produtoDao = new ProdutoDao();
 
+        Blanqueta blanqueta = blanquetaDao.acharPorPosicao("a25").orElseThrow();
 
-        processo.setBlanqueta(blanquetaDao.acharPorPosicao(fieldBlanqueta.getText().toUpperCase(Locale.ROOT)).orElseThrow());
+        System.out.println(blanqueta);
+
+
+//        processo.setBlanqueta();
         processo.setProduto(produtoDao.pesquisarPorCodigo(fieldCodigo.getText().toUpperCase(Locale.ROOT)).orElseThrow());
         processo.setData(datapicker.getValue());
         System.out.println(processo);

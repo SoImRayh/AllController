@@ -13,4 +13,5 @@ public interface IBlanquetaDao {
     List<Blanqueta> todas();
     Optional<Blanqueta> acharPorPosicao(String posicao);
     List<Blanqueta> acharPorMaquina(Maquina manquina);
+    String toSqlString(String string);
 }

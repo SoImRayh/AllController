@@ -111,24 +111,29 @@ public class ProdutoDao implements IProdutoDao{
 
     @Override
     public Optional<Produto> pesquisarPorCodigo(String s) {
-        String sql = "select * from produto where codigo  = ?";
-
+        s = this.toSqlString(s);
+        String sql = "select * from produto where codigo  = "+ s;
         Produto p = new Produto();
         try(Connection connection = ConnectionFactory.getconection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,"'"+"codigo"+"'");
-
             ResultSet rs = preparedStatement.executeQuery();
 
-            if(rs.next()){
+            if(rs.next())
+            {
                 p.setName(rs.getString("nome"));
-                p.setEmpresa(rs.getInt("empresa"));
+                p.setEmpresa(rs.getInt("fk_empresa_id"));
                 p.setCode(rs.getString("codigo"));
-
             }
         }catch (SQLException exception){
             throw new RuntimeException(exception);
         }
         return Optional.ofNullable(p);
     }
+
+    @Override
+     public String toSqlString(String string) {
+       string = string.toUpperCase();
+        return "'"+string+"'";
+    }
+
 }

@@ -73,11 +73,10 @@ public class BlanquetaDao implements IBlanquetaDao{
 
     @Override
     public Optional<Blanqueta> acharPorPosicao(String posicao) {
-        String sql = "select * from blanqueta where localizacao = ?";
+        String sql = "select * from blanqueta where localizacao = " +this.toSqlString(posicao);
         Blanqueta blanqueta = new Blanqueta();
         try(Connection connection = ConnectionFactory.getconection()) {
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, "'" + posicao + "'");
 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -99,5 +98,11 @@ public class BlanquetaDao implements IBlanquetaDao{
     @Override
     public List<Blanqueta> acharPorMaquina(Maquina manquina) {
         return null;
+    }
+
+    @Override
+    public String toSqlString(String string) {
+        string =string.toUpperCase();
+        return "'"+string+"'";
     }
 }
