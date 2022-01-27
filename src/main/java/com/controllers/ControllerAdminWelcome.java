@@ -15,10 +15,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -31,6 +28,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControllerAdminWelcome implements Initializable {
+    @FXML
+    private ChoiceBox choiceBoxMaquina;
 
     @FXML
     private TableView<Blanqueta> tableBlanqueta;
@@ -39,22 +38,22 @@ public class ControllerAdminWelcome implements Initializable {
     private Label labelTest;
 
     @FXML
-    private TableColumn<String, Blanqueta> columnFacaBlanqueta;
+    private TableColumn<Blanqueta, String> columnFacaBlanqueta;
 
     @FXML
-    private TableColumn<Integer, Blanqueta> columnIdBlanqueta;
+    private TableColumn<Blanqueta, Integer> columnIdBlanqueta;
 
     @FXML
-    private TableColumn<String, Blanqueta> columnLovalizacaoBlanqueta;
+    private TableColumn<Blanqueta, String> columnLovalizacaoBlanqueta;
 
     @FXML
-    private TableColumn<Maquina, Blanqueta> columnMaquinaBlanqueta;
+    private TableColumn<Blanqueta, Maquina> columnMaquinaBlanqueta;
 
     @FXML
-    private TableColumn<String, Blanqueta> columnObsBlanqueta;
+    private TableColumn<Blanqueta, String> columnObsBlanqueta;
 
     @FXML
-    private TableColumn<Integer, Blanqueta> columnReoeticoesBlanqueta;
+    private TableColumn<Blanqueta, Integer> columnReoeticoesBlanqueta;
 
     @FXML
     private TableView<Produto> tableProduto;
@@ -118,18 +117,6 @@ public class ControllerAdminWelcome implements Initializable {
         paneProdutos.setVisible(false);
         paneBlanquetas.setVisible(true);
 
-
-        BlanquetaDao dao = new BlanquetaDao();
-        List<Blanqueta> lista;
-        lista = dao.todas();
-        System.out.println(lista);
-        ObservableList<Blanqueta> observableList = FXCollections.observableArrayList(lista);
-
-        tableBlanqueta.setItems(observableList);
-
-
-
-
     }
 
     @FXML
@@ -192,9 +179,17 @@ public class ControllerAdminWelcome implements Initializable {
         tableProduto.setItems(list);
     }
     @FXML
+    protected void pesquisarBlanqueta(ActionEvent e){
+        BlanquetaDao dao = new BlanquetaDao();
+        List<Blanqueta> li = dao.todas();
+
+        ObservableList<Blanqueta> list = FXCollections.observableArrayList(li);
+        tableBlanqueta.setItems(list);
+    }
+    @FXML
     void abrirManutencao(ActionEvent event) {
 
-        if(anchorMenu.isVisible() == true)
+        if(anchorMenu.isVisible())
         {
 
             // Transicao de Opacidade
@@ -316,12 +311,12 @@ public class ControllerAdminWelcome implements Initializable {
         colEmpresaProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("empresa"));
         colCodgoProduto.setCellValueFactory(new PropertyValueFactory<Produto, String>("code"));
 
-        columnFacaBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("faca"));
-        columnIdBlanqueta.setCellValueFactory(new PropertyValueFactory<Integer, Blanqueta>("ID"));
-        columnLovalizacaoBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("localização"));
-        columnMaquinaBlanqueta.setCellValueFactory(new PropertyValueFactory<Maquina, Blanqueta>("Maquina"));
-        columnReoeticoesBlanqueta.setCellValueFactory(new PropertyValueFactory<Integer, Blanqueta>("Repetições"));
-        columnObsBlanqueta.setCellValueFactory(new PropertyValueFactory<String, Blanqueta>("Observações"));
+        columnIdBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, Integer>("ID"));
+        columnFacaBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, String>("faca"));
+        columnLovalizacaoBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, String>("localização"));
+        columnMaquinaBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, Maquina>("Maquina"));
+        columnReoeticoesBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, Integer>("Repetições"));
+        columnObsBlanqueta.setCellValueFactory(new PropertyValueFactory<Blanqueta, String>("Observações"));
 
     }
 }

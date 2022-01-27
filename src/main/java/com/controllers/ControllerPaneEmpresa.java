@@ -2,7 +2,6 @@ package com.controllers;
 
 import com.dao.EmpresaDao;
 import com.model.Empresa;
-import com.model.Produto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -100,4 +99,5 @@ public class ControllerPaneEmpresa implements Initializable {
         idCollum.setCellValueFactory(new PropertyValueFactory<Integer, Empresa>("id"));
 
     }
+
 }

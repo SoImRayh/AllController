@@ -52,8 +52,10 @@
                   <Image url="@../../../images/user-screen/texture.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
                <children>
+                  <Button layoutX="386.0" layoutY="73.0" mnemonicParsing="false" onAction="#pesquisarBlanqueta" text="Button" />
+                  <ChoiceBox fx:id="choiceBoxMaquina" layoutX="224.0" layoutY="73.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
                   <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
@@ -78,7 +80,7 @@
                   </TableView>
                </children>
             </Pane>
-            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
                   <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>

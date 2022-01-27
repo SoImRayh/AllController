@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerPaneBlanquetaCadastrar.java">
+<AnchorPane fx:id="paneCadastrarBlanqueta" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerPaneBlanquetaCadastrar">
    <children>
       <ImageView fitHeight="303.0" fitWidth="295.0" layoutX="129.0" layoutY="328.0">
          <image>

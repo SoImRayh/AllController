@@ -34,16 +34,14 @@ public class ControllerPaneProcesso {
         BlanquetaDao blanquetaDao = new BlanquetaDao();
         ProdutoDao produtoDao = new ProdutoDao();
 
-        Blanqueta blanqueta = blanquetaDao.acharPorPosicao("a25").orElseThrow();
-
-        System.out.println(blanqueta);
+        Blanqueta blanqueta = blanquetaDao.acharPorPosicao(fieldBlanqueta.getText().toUpperCase(Locale.ROOT)).orElseThrow();
 
 
-//        processo.setBlanqueta();
+
+        processo.setBlanqueta(blanqueta);
         processo.setProduto(produtoDao.pesquisarPorCodigo(fieldCodigo.getText().toUpperCase(Locale.ROOT)).orElseThrow());
         processo.setData(datapicker.getValue());
-        System.out.println(processo);
-        //processoDao.salvar(processo);//
+        processoDao.salvar(processo);
 
     }
 
