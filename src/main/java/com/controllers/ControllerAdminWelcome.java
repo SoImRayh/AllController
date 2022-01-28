@@ -132,6 +132,13 @@ public class ControllerAdminWelcome implements Initializable {
 
     @FXML
     protected void blanquetasTable(ActionEvent event) {
+        columnIdBlanqueta.setCellValueFactory(new PropertyValueFactory<>("id"));
+        columnFacaBlanqueta.setCellValueFactory(new PropertyValueFactory<>("faca"));
+        columnLovalizacaoBlanqueta.setCellValueFactory(new PropertyValueFactory<>("localizacao"));
+        columnMaquinaBlanqueta.setCellValueFactory(new PropertyValueFactory<>("Maquina"));
+        columnReoeticoesBlanqueta.setCellValueFactory(new PropertyValueFactory<>("repeticoes"));
+        columnObsBlanqueta.setCellValueFactory(new PropertyValueFactory<>("obs"));
+        
         esconderlabels();
         paneProcessos.setVisible(false);
         paneProdutos.setVisible(false);
@@ -342,12 +349,7 @@ public class ControllerAdminWelcome implements Initializable {
         colEmpresaProduto.setCellValueFactory(new PropertyValueFactory<>("empresa"));
         colCodgoProduto.setCellValueFactory(new PropertyValueFactory<>("code"));
 
-        columnIdBlanqueta.setCellValueFactory(new PropertyValueFactory<>("ID"));
-        columnFacaBlanqueta.setCellValueFactory(new PropertyValueFactory<>("faca"));
-        columnLovalizacaoBlanqueta.setCellValueFactory(new PropertyValueFactory<>("localização"));
-        columnMaquinaBlanqueta.setCellValueFactory(new PropertyValueFactory<>("Maquina"));
-        columnReoeticoesBlanqueta.setCellValueFactory(new PropertyValueFactory<>("Repetições"));
-        columnObsBlanqueta.setCellValueFactory(new PropertyValueFactory<>("Observações"));
+
 
     }
 }

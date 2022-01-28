@@ -39,12 +39,12 @@ public class BlanquetaDao implements IBlanquetaDao{
     }
 
     @Override
-    public void deletar(int id) {
-        String sql = "delete from blanqueta where id = ?";
+    public void deletar(String  localizacao) {
+        String sql = "delete from blanqueta where localizacao = ?";
         try(Connection connection = ConnectionFactory.getconection()){
 
             PreparedStatement ps  = connection.prepareStatement(sql);
-            ps.setInt(1,id);
+            ps.setString(1,localizacao);
             ps.execute();
         }catch (SQLException sqlException){
             throw new RuntimeException(sqlException);
@@ -62,7 +62,14 @@ public class BlanquetaDao implements IBlanquetaDao{
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()){
-                b = new Blanqueta(rs.getString("localizacao"),Maquina.valueOf(rs.getString("maquina")), rs.getString("faca"),rs.getString("obs"), rs.getInt("repeticoes") );
+                String localizacao =rs.getString("localizacao");
+                Maquina maquina = Maquina.valueOf(rs.getString("maquina"));
+                String faca =  rs.getString("faca");
+                String obs = rs.getString("obs");
+                int repeticoes = rs.getInt("repeticoes");
+                int id = rs.getInt("id");
+
+                b = new Blanqueta(localizacao,maquina,faca,obs, repeticoes,id  );
                 li.add(b);
             }
         }catch (SQLException sqlException){
