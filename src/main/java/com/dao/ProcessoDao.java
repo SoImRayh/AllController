@@ -82,4 +82,21 @@ public class ProcessoDao implements IProcessoDao {
         }
         return lista;
     }
+
+    @Override
+    public List<Processo> pesquisarComFiltro(String pesquisa) {
+        String sql = "select * from processo where fk_produto_codigo like ? or ";
+        return null;
+    }
+
+    @Override
+    public List<Processo> filtros(int i ) {
+        List<Processo> li = new ArrayList<>();
+
+       if (i == 1 ){
+                li = this.todos();
+        }
+
+        return li;
+    }
 }

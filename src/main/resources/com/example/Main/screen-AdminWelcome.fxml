@@ -52,7 +52,7 @@
                   <Image url="@../../../images/user-screen/texture.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
                   <Button layoutX="176.0" layoutY="65.0" mnemonicParsing="false" onAction="#pesquisarBlanqueta" text="Button" />
                   <ChoiceBox fx:id="choiceBoxMaquina" layoutX="14.0" layoutY="65.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
@@ -80,12 +80,14 @@
                   </TableView>
                </children>
             </Pane>
-            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0" visible="false">
+            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0">
                <children>
-                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
+                  <TableView fx:id="tableProcesso" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="C1" />
-                        <TableColumn prefWidth="75.0" text="C2" />
+                        <TableColumn fx:id="colDataProcesso" prefWidth="169.0" text="Data" />
+                        <TableColumn fx:id="colBlanquetaProcesso" prefWidth="157.0" text="Blanqueta" />
+                        <TableColumn fx:id="colCodProdProcesso" prefWidth="203.0" text="cod. Produto" />
+                        <TableColumn fx:id="colNomeProdProcesso" prefWidth="245.0" text="nome do produto" />
                      </columns>
                      <effect>
                         <DropShadow height="64.28" radius="30.762500000000003" spread="0.23" width="60.77">
@@ -95,11 +97,18 @@
                         </DropShadow>
                      </effect>
                   </TableView>
-                  <Label layoutX="455.0" layoutY="20.0" text="Processos" textFill="WHITE">
+                  <Label layoutX="455.0" text="Processos" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
+                  <Button fx:id="buttonFiltrar" layoutX="863.0" layoutY="73.0" mnemonicParsing="false" onAction="#filtrarProceso" styleClass="buttonControle" text="Procurar" />
+                  <TextField fx:id="fieldFiltroProcesso" layoutX="672.0" layoutY="72.0" prefHeight="25.0" prefWidth="171.0" promptText="blanqueta ou cod.Produto" styleClass="textfieldefalt">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <ChoiceBox fx:id="choiceFilterProcesso" layoutX="469.0" layoutY="73.0" prefWidth="150.0" />
                </children>
             </Pane>
             <Pane fx:id="paneProdutos" prefHeight="651.0" prefWidth="1112.0" visible="false">

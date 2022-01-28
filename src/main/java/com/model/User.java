@@ -1,12 +1,28 @@
 package com.model;
 
 public class User {
-
+    private String cpf;
     private String nome;
     private String senha;
     private boolean adminstrador;
 
-    public User(String nome,String senha) {
+    public User(){}
+
+    public User(String cpf , String nome, String senha,boolean adminstrador) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.senha = senha;
+        this.adminstrador = adminstrador;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+
+
         this.nome = nome;
         this.senha = senha;
         this.adminstrador = false;

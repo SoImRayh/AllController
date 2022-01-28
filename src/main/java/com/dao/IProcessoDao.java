@@ -11,5 +11,6 @@ public interface IProcessoDao {
     Processo Atualizar(Processo processo);
     Optional<Processo> pesquisarID(String id);
     List<Processo> todos();
-
+    List<Processo> pesquisarComFiltro(String pesquisa);
+    List<Processo> filtros(int i);
 }
