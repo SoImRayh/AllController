@@ -39,4 +39,16 @@ public class UsuarioDao implements IUsuarioDao{
             throw new RuntimeException(sqlException);
         }
     }
+
+    @Override
+    public void Buscar(String nome, String senha){
+        String sql = "select from usuario where nome = ? AND senha = ?";
+        try(Connection connection = ConnectionFactory.getconection()) {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, nome);
+            ps.executeUpdate();
+        }catch (SQLException sqlException){
+            throw new RuntimeException(sqlException);
+        }
+    }
 }
