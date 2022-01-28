@@ -816,13 +816,13 @@ sequence|table|24690|24691|3
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="3" parent="1" name="bigdata">
-      <ObjectId>24853</ObjectId>
-      <OwnerName>postgres</OwnerName>
-    </database>
-    <database id="4" parent="1" name="postgres">
+    <database id="3" parent="1" name="postgres">
       <Comment>default administrative connection database</Comment>
       <ObjectId>13754</ObjectId>
+      <OwnerName>postgres</OwnerName>
+    </database>
+    <database id="4" parent="1" name="bigdata">
+      <ObjectId>24853</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
     <role id="5" parent="1" name="pg_database_owner">

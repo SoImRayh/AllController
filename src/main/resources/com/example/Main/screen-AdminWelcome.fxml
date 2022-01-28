@@ -52,7 +52,7 @@
                   <Image url="@../../../images/user-screen/texture.png" />
                </image>
             </ImageView>
-            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0" visible="false">
+            <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
                <children>
                   <Button layoutX="176.0" layoutY="65.0" mnemonicParsing="false" onAction="#pesquisarBlanqueta" text="Button" />
                   <ChoiceBox fx:id="choiceBoxMaquina" layoutX="14.0" layoutY="65.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
@@ -61,7 +61,7 @@
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
-                  <TableView layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
+                  <TableView fx:id="tableBlanqueta" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>
                         <TableColumn fx:id="columnIdBlanqueta" prefWidth="75.0" text="ID" />
                         <TableColumn fx:id="columnLovalizacaoBlanqueta" prefWidth="104.0" text="localização" />
@@ -80,7 +80,7 @@
                   </TableView>
                </children>
             </Pane>
-            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0">
+            <Pane fx:id="paneProcessos" prefHeight="651.0" prefWidth="1112.0" visible="false">
                <children>
                   <TableView fx:id="tableProcesso" layoutX="15.0" layoutY="100.0" prefHeight="519.0" prefWidth="1057.0" styleClass="tableDesign">
                      <columns>

@@ -33,11 +33,6 @@ public class ControllerLogin {
 
     @FXML
     protected void fazerLogin(ActionEvent e){
-        try{
-
-        }catch(sqlException erro) {
-
-        }
         HelloApplication.trocarTela(2);
     }
 
