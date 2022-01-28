@@ -8,5 +8,5 @@ public interface IUsuarioDao {
 
     void excluir(String cpf);
 
-    void Buscar(String nome, String senha);
+    void Buscar (String nome, String senha);
 }

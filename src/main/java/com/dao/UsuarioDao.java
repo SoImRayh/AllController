@@ -5,6 +5,7 @@ import com.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UsuarioDao implements IUsuarioDao{
@@ -46,6 +47,7 @@ public class UsuarioDao implements IUsuarioDao{
         try(Connection connection = ConnectionFactory.getconection()) {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, nome);
+            ps.setString(2, senha);
             ps.executeUpdate();
         }catch (SQLException sqlException){
             throw new RuntimeException(sqlException);
