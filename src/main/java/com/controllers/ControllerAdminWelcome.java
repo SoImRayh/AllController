@@ -111,8 +111,6 @@ public class ControllerAdminWelcome implements Initializable {
     @FXML
     protected void blanquetasTable(ActionEvent event) {
         esconderlabels();
-
-
         paneProcessos.setVisible(false);
         paneProdutos.setVisible(false);
         paneBlanquetas.setVisible(true);
@@ -175,6 +173,7 @@ public class ControllerAdminWelcome implements Initializable {
     protected void pesquisar(ActionEvent e) {
         ProdutoDao dao = new ProdutoDao();
         List<Produto> li = dao.todos();
+
         ObservableList<Produto> list = FXCollections.observableArrayList(li);
         tableProduto.setItems(list);
     }
@@ -256,9 +255,7 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void editarEmpresa(ActionEvent event) {
-
-    }
+    void editarEmpresa(ActionEvent event) { HelloApplication.panescontrol(4);}
 
     @FXML
     void editarProduto(ActionEvent event) {
@@ -270,14 +267,10 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void removerEmpresa(ActionEvent event) {
-
-    }
+    void removerEmpresa(ActionEvent event) { HelloApplication.panescontrol(4);}
 
     @FXML
-    void removerProcesso(ActionEvent event) {
-
-    }
+    void removerProcesso(ActionEvent event) { HelloApplication.panescontrol(10);}
 
     @FXML
     void removerProduto(ActionEvent event) {
@@ -285,9 +278,7 @@ public class ControllerAdminWelcome implements Initializable {
     }
 
     @FXML
-    void removerUsuario(ActionEvent event) {
-
-    }
+    void removerUsuario(ActionEvent event) { HelloApplication.panescontrol(11);}
 
     private void esconderlabels() {
 

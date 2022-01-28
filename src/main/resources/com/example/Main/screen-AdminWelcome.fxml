@@ -54,8 +54,8 @@
             </ImageView>
             <Pane fx:id="paneBlanquetas" prefHeight="651.0" prefWidth="1112.0">
                <children>
-                  <Button layoutX="386.0" layoutY="73.0" mnemonicParsing="false" onAction="#pesquisarBlanqueta" text="Button" />
-                  <ChoiceBox fx:id="choiceBoxMaquina" layoutX="224.0" layoutY="73.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
+                  <Button layoutX="176.0" layoutY="65.0" mnemonicParsing="false" onAction="#pesquisarBlanqueta" text="Button" />
+                  <ChoiceBox fx:id="choiceBoxMaquina" layoutX="14.0" layoutY="65.0" prefWidth="150.0" style="-fx-background-color: #483FBD;" />
                   <Label layoutX="455.0" layoutY="20.0" text="Blanquetas" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
