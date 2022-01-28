@@ -23,18 +23,16 @@
             <Image url="@../../../images/user-screen/icon-produto.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="139.0" prefHeight="30.0" prefWidth="95.0" text="Excluir" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="138.0" prefHeight="39.0" prefWidth="218.0" text="Excluir Produto" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <TextField fx:id="fieldCodExcluir" layoutX="103.0" layoutY="331.0" prefHeight="26.0" prefWidth="217.0" promptText="#000000000" />
-      <Label fx:id="labelCodExcluir" layoutX="131.0" layoutY="275.0" text="Cod. Produto: " textFill="WHITE">
+      <TextField fx:id="fieldCodExcluir" layoutX="99.0" layoutY="327.0" prefHeight="26.0" prefWidth="217.0" promptText="Código do Produto:" styleClass="textfieldefalt">
          <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
-      <Button layoutX="164.0" layoutY="522.0" mnemonicParsing="false" onAction="#excluirProduto" prefHeight="39.0" prefWidth="149.0" styleClass="buttonControle" text="Excluir">
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="60.0" layoutY="511.0" mnemonicParsing="false" onAction="#excluirProduto" prefHeight="39.0" prefWidth="149.0" styleClass="cadButton" text="Excluir">
          <font>
             <Font size="18.0" />
          </font>
@@ -46,7 +44,7 @@
             </DropShadow>
          </effect>
       </Button>
-      <Line endX="-39.0" layoutX="311.0" layoutY="178.0" startX="-163.79998779296875" stroke="WHITE" />
+      <Line endX="52.20001220703125" layoutX="264.0" layoutY="177.0" startX="-163.79998779296875" stroke="WHITE" />
       <ImageView fitHeight="19.0" fitWidth="17.0" layoutX="125.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../../images/user-screen/correct.png" />
@@ -57,5 +55,6 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <Line endX="55.5999755859375" endY="-0.600006103515625" layoutX="265.0" layoutY="358.0" startX="-163.79998779296875" stroke="WHITE" />
    </children>
 </AnchorPane>

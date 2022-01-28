@@ -23,40 +23,29 @@
             <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
-      <Line endX="106.20001220703125" layoutX="179.0" layoutY="178.0" startX="-44.20001220703125" stroke="WHITE" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="139.0" prefHeight="30.0" prefWidth="111.0" text="Atualizar" textFill="WHITE">
+      <Line endX="210.5999755859375" layoutX="126.0" layoutY="177.0" startX="-44.20001220703125" stroke="WHITE" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="138.0" prefHeight="39.0" prefWidth="223.0" text="Atualizar Produto" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="246.0" text="Cod. Produto" textFill="WHITE">
+      <TextField fx:id="fieldCodAtualizarFinal" layoutX="99.0" layoutY="222.0" prefHeight="31.0" prefWidth="222.0" promptText="Código do Produto:" styleClass="textfieldefalt">
          <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelCodExcluir1" layoutX="64.0" layoutY="346.0" text="Novo Cód. Produto" textFill="WHITE">
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="fieldEmpresaAtualizarFinal" layoutX="98.0" layoutY="390.0" prefHeight="31.0" prefWidth="222.0" promptText="Nova Empresa:" styleClass="textfieldefalt">
          <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelNomeExcluir1" layoutX="62.0" layoutY="395.0" text="Nome do Produto: " textFill="WHITE">
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="fieldNomeAtualizarFinal" layoutX="98.0" layoutY="344.0" prefHeight="31.0" prefWidth="222.0" promptText="Novo Nome:" styleClass="textfieldefalt">
          <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelEmpresaExcluir1" layoutX="61.0" layoutY="441.0" text="Empresa do Produto: " textFill="WHITE">
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="fieldCodAtualizar" layoutX="98.0" layoutY="295.0" prefHeight="31.0" prefWidth="222.0" promptText="Novo Código:" styleClass="textfieldefalt">
          <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="fieldCodAtualizarFinal" layoutX="225.0" layoutY="250.0" prefHeight="25.0" prefWidth="149.0" promptText="000000" />
-      <TextField fx:id="fieldEmpresaAtualizarFinal" layoutX="225.0" layoutY="438.0" prefHeight="25.0" prefWidth="149.0" promptText="xxxxxxx" />
-      <TextField fx:id="fieldNomeAtualizarFinal" layoutX="225.0" layoutY="392.0" prefHeight="25.0" prefWidth="149.0" promptText="xxxxxx" />
-      <TextField fx:id="fieldCodAtualizar" layoutX="225.0" layoutY="343.0" promptText="00000" />
-      <Button layoutX="164.0" layoutY="522.0" mnemonicParsing="false" onAction="#atualizarProduto" prefHeight="40.0" prefWidth="182.0" styleClass="buttonControle" text="Atualizar">
-         <font>
-            <Font size="18.0" />
-         </font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="64.0" layoutY="519.0" mnemonicParsing="false" onAction="#atualizarProduto" prefHeight="40.0" prefWidth="182.0" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Atualizar">
          <effect>
             <DropShadow>
                <color>
@@ -75,5 +64,9 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <Line endX="121.0" layoutX="202.0" layoutY="252.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="325.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="198.0" layoutY="375.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="121.0" layoutX="197.0" layoutY="421.0" startX="-100.0" stroke="WHITE" />
    </children>
 </AnchorPane>

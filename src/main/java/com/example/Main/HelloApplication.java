@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     private static Stage stage;
     private static Scene    loginScene,welcomescene,
                             paneAdicionarBlanqueta,paneExcluirBlanqueta,paneAtualizarBlanqueta,
-                            paneAdicionarProcesso,
+                            paneAdicionarProcesso,paneExcluirProcesso,
                             paneAdicionarProduto,paneExcluirProduto,paneAtualizarProduto,
                             paneAdicionarUsuario,paneExcluirUsuario,paneAtualizarUsuario,
                             paneAdicionarEmpresa,paneExcluirEmpresa,paneAtualizarEmpresa;
@@ -52,6 +52,8 @@ public class HelloApplication extends Application {
         Parent fxmlAdicionarProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo.fxml"));
         paneAdicionarProcesso = new Scene(fxmlAdicionarProcesso);
 
+        Parent fxmlExcluirProcesso = FXMLLoader.load(HelloApplication.class.getResource("pane-Processo-Excluir.fxml"));
+        paneExcluirProcesso = new Scene(fxmlExcluirProcesso);
 
         //Produto
         Parent fxmlAdicionarProdudo = FXMLLoader.load(HelloApplication.class.getResource("pane-Produto.fxml"));
@@ -67,7 +69,7 @@ public class HelloApplication extends Application {
 
         //Usuario
         Parent fxmlAdicionarUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
-        Parent fxmlExcluirUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
+        Parent fxmlExcluirUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario-Excluir.fxml"));
         Parent fxmlAtualizarUsuario = FXMLLoader.load(HelloApplication.class.getResource("pane-Usuario.fxml"));
         paneAdicionarUsuario = new Scene(fxmlAdicionarUsuario);
         paneExcluirUsuario = new Scene(fxmlExcluirUsuario);
@@ -160,6 +162,18 @@ public class HelloApplication extends Application {
             case 9:
             {
                 panes.setScene(paneAdicionarUsuario);
+                panes.show();
+                break;
+            }
+            case 10:
+            {
+                panes.setScene(paneExcluirProcesso);
+                panes.show();
+                break;
+            }
+            case 11:
+            {
+                panes.setScene(paneExcluirUsuario);
                 panes.show();
                 break;
             }
