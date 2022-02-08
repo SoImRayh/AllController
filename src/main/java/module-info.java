@@ -9,9 +9,12 @@ module com.example.allcontroller {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens com.example.Main to javafx.fxml;
     exports com.example.Main;
     exports com.controllers;
+    exports com.model;
     opens com.controllers to javafx.fxml;
+
 }

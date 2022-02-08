@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paneBackground" stylesheets="@../../../CSS/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ControllerPaneBlanquetaExcluir">
+   <children>
+      <ImageView fitHeight="303.0" fitWidth="295.0" layoutX="129.0" layoutY="330.0">
+         <image>
+            <Image url="@../../../images/blanquetasBig.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonBlanquetaExcluir" layoutX="65.0" layoutY="519.0" mnemonicParsing="false" onAction="#excluir" styleClass="cadButton" stylesheets="@../../../CSS/css.css" text="Excluir" />
+      <ImageView fitHeight="63.0" fitWidth="200.0" layoutX="112.0" layoutY="28.0">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="blanquetaExcluirLocalização" layoutX="98.0" layoutY="324.0" prefHeight="50.0" prefWidth="224.0" promptText="Localização:" styleClass="textfieldefalt" stylesheets="@../../../CSS/css.css">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Line endX="121.0" layoutX="198.0" layoutY="367.0" startX="-100.0" stroke="WHITE" />
+      <Label layoutX="122.0" layoutY="139.0" stylesheets="@../../../CSS/css.css" text="Excluir Blanqueta" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="154.0" layoutX="181.0" layoutY="175.0" startX="-100.0" stroke="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+
+
+
+.paneMenu{
+    -fx-background-color: #353566;
+    -fx-pref-height: 600;
+    -fx-pref-width: 400;
+
+}
+
+.buttonControle{
+    -fx-background-color: #453CAB;
+    -fx-background-radius: 10;
+    -fx-text-alignment: center;
+    -fx-text-fill: #ffffff;
+    -fx-pref-height: 20;
+    -fx-pref-width: 95;
+
+}

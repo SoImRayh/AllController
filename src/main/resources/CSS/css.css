@@ -1,15 +1,101 @@
-.background{
-    -fx-background-color:#2E2E48;
-}
+
 
 .screenbackground{
-    -fx-background-color: #202020;
-    -fx-background-image:"src/main/resources/Images/logo.png";
+    -fx-background-color: #2E2E48;
+    -fx-pref-height: 720;
+    -fx-pref-width: 1290;
 }
-.button{
+.paneBackground{
+    -fx-background-color: #353566;
+    -fx-pref-height: 633;
+    -fx-pref-width: 424;
+}
+.paneMenu{
+    -fx-background-color: #353566;
+    -fx-background-radius: 10;
+
+}
+
+.exitButton{
+    -fx-background-radius: 10;
+    -fx-background-color: #ff0000;
+}
+
+.user-icon{
+    -fx-fit-to-height: 78;
+    -fx-fit-to-width: 78;
+}
+
+.buttonMenu{
+    -fx-background-color: #2E2E48;
+    -fx-text-alignment: center;
+    -fx-pref-height: 40;
+    -fx-pref-width: 190;
+}
+
+.buttonMenu:hover{
+    -fx-background-color: #1F1F31;
+    -fx-border-color: #5B4DFF;
+    -fx-border-width: 0px 0px 0px 15px;
+}
+
+.buttonMenu:pressed{
+    -fx-background-color: #5B4DFF;
+
+}
+
+
+.buttonControle{
+    -fx-background-color: #453CAB;
+    -fx-background-radius: 5;
+    -fx-text-alignment: center;
+    -fx-text-fill: #ffffff;
+    -fx-pref-height: 20;
+    -fx-pref-width: 95;
+
+}
+
+.buttonControle:hover{
+    -fx-background-radius: 0;
+    -fx-opacity:0.85;
+}
+
+.buttonControle:pressed {
+    -fx-background-radius:0;
+    -fx-background-color: #483FBD;
+}
+
+.textfieldefalt{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: rgba(0,0,0,0);
+
+}
+
+.cadButton{
     -fx-background-color:  #453CAB;
     -fx-text-fill: #ffffff;
-    -fx-border-radius: 5;
+    -fx-text-alignment: center;
+    -fx-pref-height: 37;
+    -fx-pref-width: 295;
+}
 
-    
+.cadButton:hover{
+    -fx-background-radius: 0;
+    -fx-opacity:0.85;
+}
+
+.cadButton:pressed {
+    -fx-background-radius:0;
+    -fx-background-color: #483FBD;
+}
+
+.dateLabel {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-color: #453CAB;
+}
+
+.tableDesign{
+    -fx-background-color:#483FBD;
+    -fx-background-radius: 15px;
+
 }
