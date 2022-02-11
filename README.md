@@ -1,16 +1,14 @@
-Projeto do segundo período do curso de Ciências da computação
-Projeto desenvolvido por:
+Projeto integrador do 2º período do curso de Ciência da Computação, semestre 2021/2.
 
-    Railande da Silva : https://github.com/SoImRayh
-
-    Adriel :
-
-    Ítalo : 
-
+Desenvolvido por: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/SoImRayh" target="_blank">Railande da Silva</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/izuca" target="_blank">Adriel</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/Scyphor56" target="_blank">Ítalo</a><br>
+    
 
 Projeto desenvolvido na linguagem Java para aplicação do paradigma da programação orientada a objetos, aplicando a arquitetura MVC.
     
-ferramentas usadas:
+Ferramentas usadas:
 
     framework: javaFx 
 
